@@ -1,5 +1,5 @@
 const PlanetsCards = (props) => {
-    console.log("Props", props.data)
+    //console.log("Props", props.data)
     const {englishName, isPlanet, density, gravity} = props.data
 
     return (

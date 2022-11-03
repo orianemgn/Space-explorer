@@ -14,22 +14,39 @@ const SolarSystem = () => {
         return <h2>an error has occurred, please contact the support</h2>;
       }
 
-      const solarsystem = apodResp.data.bodies; 
+      const solarSystem = apodResp.data.bodies; 
+
+      const solarSystemFiltered = solarSystem.filter(element => element.isPlanet === true); 
+
+      const moon = solarSystem.filter(element => element.englishName === "Moon")
+      const sun = solarSystem.filter(element => element.englishName === "Sun")
+
+      console.log("moon", moon)
+
+      console.log("solar filter", solarSystemFiltered)
 
       //console.log(solarsystem)
 
 
       //console.log(apodResp.data)
     return(
-        <div className="solar-container">
-            {solarsystem.map((element, index) => {
+        <>
+            <div className="solar-container">
+            {solarSystemFiltered.map((element, index) => {
                 console.log(element.isPlanet)
                 return (
                     <PlanetsCards data={element} /> 
                     )                
             })}
             
-        </div>
+            </div>
+            <div>
+                <h2>No planet</h2>
+                <PlanetsCards data={moon[0]}/>
+                <PlanetsCards data={sun[0]}/>
+            </div>
+        </>
+        
     )
 }
 
