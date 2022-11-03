@@ -9,7 +9,7 @@ import NewsCard from "./NewsCard";
 function News(params) {
 
     const [items, setItems] = useState([])
-    const [visible, setVisible] = useState(6)
+    const [visible, setVisible] = useState(8)
 
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 3)
@@ -28,7 +28,7 @@ function News(params) {
                 <NewsCard title={item.title} source={item.source} url={item.url} />
             ))
             }
-            <button className={styles.moreButton} onClick={showMoreItems}>MORE items</button>
+            <button className={styles.moreButton} onClick={showMoreItems}>SEE MORE NEWS UPDATES</button>
 
         </div>
     )

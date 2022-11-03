@@ -7,7 +7,7 @@ function NewsCard(params) {
             <h2>{params.title}</h2>
             <p>Source: {params.source}</p>
             <a href={params.url} target="_blank" rel="noreferrer">
-                <button>More</button>
+                <button>Read More</button>
 
             </a>
         </div>
