@@ -1,0 +1,11 @@
+.weather-container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.weather-cards {
+    margin: 10px;
+    padding: 10px; 
+}
