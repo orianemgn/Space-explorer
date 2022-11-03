@@ -5,9 +5,12 @@ import { useFetch } from '../useFetch/useFetch';
 import './apod.css'
 
 const Apod = () => {
-const apodURL = "https://api.nasa.gov/planetary/apod?api_key=s5cZSqCg6EAGg2JcBiQAp4qIEwLnH1arbNP28CMX"; 
 
-console.log("API KEY:", process.env.REACT_NASA_O_API_KEY)
+const apodURL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_O_API_KEY}`; 
+
+console.log("API KEY:", process.env.REACT_APP_NASA_O_API_KEY)
+
+
 const [apodResp, errorResp, isLoading] = useFetch(apodURL);
 //const [apod, setApod] = useState(""); 
 //useEffect(() => {
