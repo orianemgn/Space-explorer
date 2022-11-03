@@ -1,5 +1,6 @@
 import {useFetch} from '../useFetch/useFetch';
 import PlanetsCards from './PlanetsCards';
+import './solarsysteme.css';
 
 const SolarSystem = () => {
     const [apodResp, errorResp, isLoading] = useFetch('https://api.le-systeme-solaire.net/rest/bodies/');
@@ -20,7 +21,7 @@ const SolarSystem = () => {
 
       //console.log(apodResp.data)
     return(
-        <div>
+        <div className="solar-container">
             {solarsystem.map((element, index) => {
                 console.log(element.isPlanet)
                 return (

@@ -1,11 +1,11 @@
 const ApodContainer = (props) => {
     return (
         <>
-            <div>
-                <h3>Image of the days from {props.apod.copyright}</h3>
-                <p>{props.apod.explanation}</p>
-            </div>
-            <img src={props.apod.url} alt={props.apod.title} style={{width : '50%'}}/>
+                <div className="apod-card">
+                    <h1> Image of the Day </h1>
+                    <h3>Copyright to {props.apod.copyright}</h3>
+                    <p>{props.apod.explanation}</p>
+                </div>          
         </>
     )
 }
