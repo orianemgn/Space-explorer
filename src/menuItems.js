@@ -21,7 +21,7 @@ export const menuItems = [
         submenu: [
             {
                 title: 'Image of the Day',
-                url:'planets-glossary',
+                url:'image-of-the-day',
             },
             {
                 title: 'Planets Glossary',
