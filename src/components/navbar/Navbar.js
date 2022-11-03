@@ -11,7 +11,7 @@ function Navbar() {
     const handleClick = () => {
         setClick(!click);
     } 
-    console.log(menuItems)
+
   return (
     
     <nav id="navbar">

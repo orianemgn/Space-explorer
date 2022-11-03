@@ -5,11 +5,9 @@ import { useFetch } from '../useFetch/useFetch';
 import './apod.css'
 
 const Apod = () => {
-//first goal - try to get datas of the API and save them in the state
-// API NASA Astronomy Picture of the Day
 const apodURL = "https://api.nasa.gov/planetary/apod?api_key=s5cZSqCg6EAGg2JcBiQAp4qIEwLnH1arbNP28CMX"; 
 
-
+console.log("API KEY:", process.env.REACT_NASA_O_API_KEY)
 const [apodResp, errorResp, isLoading] = useFetch(apodURL);
 //const [apod, setApod] = useState(""); 
 //useEffect(() => {
@@ -34,10 +32,6 @@ if (isLoading) {
     console.log("error: ", errorResp);
     return <h2>an error has occurred, please contact the support</h2>;
   }
-
-
-
-
 
 
     return (
