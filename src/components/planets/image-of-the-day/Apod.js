@@ -1,5 +1,5 @@
 import ApodContainer from './ApodContainer';
-import { useFetch } from '../useFetch/useFetch';
+import { useFetch } from '../../useFetch/useFetch';
 import './apod.css'
 
 const Apod = () => {

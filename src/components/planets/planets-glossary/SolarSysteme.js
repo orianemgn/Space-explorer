@@ -1,4 +1,4 @@
-import {useFetch} from '../useFetch/useFetch';
+import {useFetch} from '../../useFetch/useFetch';
 import PlanetsCards from './PlanetsCards';
 import './solarsysteme.css';
 

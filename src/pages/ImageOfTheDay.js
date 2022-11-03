@@ -1,5 +1,5 @@
 import React from 'react';
-import Apod from '../components/planets/Apod';
+import Apod from '../components/planets/image-of-the-day/Apod';
 
 function ImageOfTheDay() {
   return (
