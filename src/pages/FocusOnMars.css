@@ -1,0 +1,23 @@
+
+
+.focus-on-mars {
+    background-image: url('../assests/daniele-colucci-OtXJhYjbKeg-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh; 
+    text-align: center;
+}
+
+.focus-on-mars h1 {
+    color: white;
+    padding: 20px; 
+}
+
+
+
+@media screen and (min-width: 960px){
+    .background-mars {
+        height: 1200px
+      }
+}
