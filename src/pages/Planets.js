@@ -1,5 +1,5 @@
-import Apod from '../planets/Apod'; 
-import Mars from '../planets/Mars';
+import Apod from '../components/planets/Apod'; 
+import Mars from '../components/planets/Mars';
 
 const Planets = () => {
 

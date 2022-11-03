@@ -1,5 +1,5 @@
 import './App.css';
-import Planets from './components/pages/Planets'; 
+import Planets from './pages/Planets'; 
 import Navbar from './components/navbar/Navbar';
 import { BrowserRouter as Router} from 'react-router-dom';
 
