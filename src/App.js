@@ -2,7 +2,7 @@ import './App.css';
 import Planets from './pages/Planets';
 import Navbar from './components/navbar/Navbar';
 import { BrowserRouter as Router, Form } from 'react-router-dom';
-import NewsPage from './pages/News';
+
 
 
 
@@ -16,7 +16,6 @@ function App() {
 
       <h1>Space Explorer</h1>
       <Planets />
-      <NewsPage />
     </div>
   );
 }

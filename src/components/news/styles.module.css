@@ -1,0 +1,39 @@
+.news {
+    height: fit-content;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsCard {
+    text-align: center;
+    background-color: coral;
+    padding: 2rem;
+    width: 25rem;
+    height: 17rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2rem;
+}
+
+.newsCard button {
+    background-color: aqua;
+    width: 50%;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+}
+
+.moreButton {
+    width: 100%;
+    padding: 1rem;
+    margin: 5rem;
+    background-color: coral;
+    font-size: 1.5rem;
+    border: none;
+}

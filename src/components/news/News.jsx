@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import React from 'react'
 import axios from "axios"
+import styles from './styles.module.css'
+import NewsCard from "./NewsCard";
 
 
 
-function News() {
+function News(params) {
 
     const [items, setItems] = useState([])
-    const [visible, setVisible] = useState(3)
+    const [visible, setVisible] = useState(6)
 
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 3)
@@ -20,19 +22,14 @@ function News() {
 
 
     return (
-        <div className='news'>
-            {
-                items.slice(0, visible).map(item => (
-                    <div>
-                        <h2>{item.title}</h2>
-                        <a href={item.url} target="_blank">
-                            <button>More</button>
-                        </a>
-                        <p>{item.source}</p>
-                    </div>
-                ))
+        <div className={styles.news}>
+            {items.slice(0, visible).map(item => (
+
+                <NewsCard title={item.title} source={item.source} url={item.url} />
+            ))
             }
-            <button onClick={showMoreItems}>MORE items</button>
+            <button className={styles.moreButton} onClick={showMoreItems}>MORE items</button>
+
         </div>
     )
 }
