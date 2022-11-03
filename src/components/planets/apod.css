@@ -1,22 +1,17 @@
 .background-apod{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-.apod-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;  
 }
 
 .apod-card {
     background: #19426ab7;
-    width: 50%;
+    width: 100%;
+    margin: auto; 
     padding: 40px;
     color: white; 
-    margin: 100px; 
+    
 }
 
 .apod-card h1 {
@@ -29,4 +24,28 @@
 .apod-card p {
     line-height: 24px;
     font-size: 14px;
+}
+
+.image-mobile {
+    width: 100%;
+}
+
+@media screen and (min-width: 960px){
+    .image-mobile {
+        display: none;
+    }
+    .apod-card {
+        width: 50%;
+        height: auto;
+        margin-right: 100px;
+    }
+    .background-apod, .apod-container{
+        height: 100vh;
+    }
+
+    .apod-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }
