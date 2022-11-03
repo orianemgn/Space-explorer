@@ -1,147 +1,191 @@
-.navbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-    height: 80px;
+/* Basic styling */
+
+nav {
+    background: rgb(209, 155, 155); 
+    padding: 0 15px; 
+}
+
+a {
+    color: white; 
+    text-decoration: none;
+}
+
+.menu, .submenu {
+    list-style-type: none;
+}
+
+.logo {
+    font-family: "Anton", sans-serif;
+    font-size: 20px; 
+    padding: 7.5px 10px 7.5px 0; 
+}
+
+.item {
+    padding: 10px; 
+}
+
+/*For the link GitHub and About Us*/
+.item.button {
+    padding: 9px 5px; 
+}
+
+.item:not(.button) a:hover, item a:hover::after {
+    color: black;
+}
+
+/*Mobile Menu*/
+.menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-  }
-  
-  .navbar-logo {
-    font-family: 'Anton', sans-serif;
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1.6rem;
-  }
-  
-  .fa-firstdraft {
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
-  }
-  
-  .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
-    list-style: none;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 5px;
+}
+
+.menu li.subitem a {
+    padding: 15px;
+}
+
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+
+.item.button {
+    order: 2;
+}
+
+/*item are display none and when we click on the toggle they will get class active and display block*/
+.item {
+    order: 3; 
+    width: 100%;
     text-align: center;
-    width: 70vw;
-    justify-content: end;
-    margin-right: 2rem;
-  }
-  
-  .nav-item {
-    display: flex;
-    align-items: center;
-    height: 80px;
-  }
-  
-  .nav-links {
+    display: none;
+}
+
+.active .item {
+    display: block; 
+}
+
+.button.secondary {
+    border-bottom: 1px #444 solid;
+}
+
+/* Submenu up from mobile screens */
+.submenu {
+    display: none;
+}
+.submenu-active .submenu {
+   display: block;
+}
+.has-submenu i {
+    font-size: 12px;
+}
+.has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900; 
+    content: "\f078";
     color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-  
-  .nav-links:hover {
-    background-color: #1888ff;
-    border-radius: 4px;
-    transition: all 0.2s ease-out;
-  }
-  
-  .fa-bars {
-    color: #fff;
-  }
-  
-  .nav-links-mobile {
-    display: none;
-  }
-  
-  .menu-icon {
-    display: none;
-  }
-  
-  @media screen and (max-width: 960px) {
-    .NavbarItems {
-      position: relative;
+    padding-left: 5px;
+}
+.subitem a {
+    padding: 10px 15px;
+}
+.submenu-active {
+    background-color: #444;
+    border-radius: 3px;
+}
+
+/*Tablet menu */
+@media screen and (min-width: 700px) {
+    .menu {
+        justify-content: center;
     }
-  
-    .nav-menu {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      /*height: 90vh;*/
-      position: absolute;
-      top: 80px;
-      left: -100%;
-      opacity: 1;
-      transition: all 0.5s ease;
+    .logo {
+        flex: 1;
     }
-  
-    .nav-menu.active {
-      background: #242222;
-      left: 0;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
+    .item.button {
+        width: auto; 
+        order: 1; 
+        display: block;
     }
-  
-    .nav-links {
-      text-align: center;
-      padding: 2rem;
-      width: 100%;
-      display: table;
+
+    .toggle{
+        flex: 1; 
+        text-align: right;
+        order: 2;
     }
-  
-    .nav-links:hover {
-      background-color: #1888ff;
-      border-radius: 0;
+
+    /*Button GitHub and About us from tablet screen*/
+    .menu li.button a {
+        padding: 10px 15px; 
+        margin: 5px 0;
     }
-  
-    .navbar-logo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(25%, 50%);
+
+    .button.secondary {
+        border: 0;
     }
-  
-    .menu-icon {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 60%);
-      font-size: 1.8rem;
-      cursor: pointer;
+
+    .button a, 
+    .button.secondary a {
+        background: transparent; 
+        border: 1px white solid;
+        color: white;
     }
-  
-    .fa-times {
-      color: #fff;
-      font-size: 2rem;
+    .button a:hover {
+        text-decoration: none;
     }
-  
-    .nav-links-mobile {
-      display: block;
-      text-align: center;
-      padding: 1.5rem;
-      margin: 2rem auto;
-      border-radius: 4px;
-      width: 80%;
-      background: #1888ff;
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.5rem;
+    
+
+    .button:not(.secondary) a:hover, 
+    .button.secondary a:hover{
+        background: white;
+        color: #444;
     }
-  
-    .nav-links-mobile:hover {
-      background: #fff;
-      color: #1888ff;
-      transition: 250ms;
+}
+
+/*Desktop menu*/
+
+@media screen and (min-width: 960px){
+    .menu {
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        background: none;
     }
-  
-    button {
-      display: none;
+    .logo {
+        order: 0;
     }
-  }
+
+    .item {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .submenu-active .submenu {
+        display: block; 
+        position: absolute;
+        left: 0;
+        top: 71px;
+        background: #111; 
+    }
+    .toggle {
+        display: none;
+    }
+
+    .submenu-active {
+        border-radius: 0;
+    }
+    
+}
