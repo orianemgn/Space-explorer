@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Apod from '../components/planets/image-of-the-day/Apod';
 
 function ImageOfTheDay() {
   return (
-    <div>ImageOfTheDay</div>
+    <div>
+        <Apod />   
+    </div>
+
   )
 }
 

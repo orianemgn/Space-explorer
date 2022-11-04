@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 
 
-const Dropdown = ({ submenus },) => {
 
+const Dropdown = ({submenus} ) => {
 
-    console.log("submenu:", submenus);
-    return (
+   return (
         <ul className="submenu">
             {submenus.map((submenu, index) => (
                 <li key={index} className="subitem">

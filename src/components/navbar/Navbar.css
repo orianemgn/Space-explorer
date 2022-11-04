@@ -98,7 +98,7 @@ a {
     padding: 10px 15px;
 }
 .submenu-active {
-    background-color: #444;
+    background-color: rgb(209, 177, 177); 
     border-radius: 3px;
 }
 
@@ -178,7 +178,7 @@ a {
         position: absolute;
         left: 0;
         top: 71px;
-        background: #111; 
+        background: rgb(209, 177, 177); 
     }
     .toggle {
         display: none;

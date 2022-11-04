@@ -10,8 +10,6 @@ const MenuItems = ({items}) => {
         setClick(!click);
     } 
 
-    console.log("items:", items)
-    console.log("items submenu", items.submenu)
 
     return (
         <li className={click? `${items.className} submenu-active` : `${items.className}`}>

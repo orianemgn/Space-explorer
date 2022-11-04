@@ -40,7 +40,7 @@ export const menuItems = [
     },
     {
         title: "GitHub", 
-        url: "#", 
+        url: "https://github.com/orianemgn/Space-explorer", 
         className: 'item button',
     },
     {

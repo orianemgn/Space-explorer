@@ -1,0 +1,52 @@
+.background-apod{
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;  
+}
+
+.apod-card {
+    background: #19426ab7;
+    width: 100%;
+    margin: auto; 
+    padding: 40px;
+    color: white; 
+    
+}
+
+.apod-card h1 {
+    font-family: "Anton", sans-serif;
+    font-size:3rem; 
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.apod-card p {
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.image-mobile {
+    width: 100%;
+    padding: 15px 0; 
+}
+
+@media screen and (min-width: 960px){
+    .image-mobile {
+        display: none;
+    }
+    .apod-card {
+        width: 50%;
+        height: auto;
+        margin-right: 100px;
+    }
+    .background-apod, .apod-container{
+        height: 100vh;
+    }
+
+    .apod-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
