@@ -1,7 +1,7 @@
-import {Link} from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 
-const Dropdown = ({submenus}, ) => {
+const Dropdown = ({ submenus },) => {
 
 
     console.log("submenu:", submenus);
