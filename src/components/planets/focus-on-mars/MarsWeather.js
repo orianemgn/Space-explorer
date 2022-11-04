@@ -16,7 +16,7 @@ const MarsWeather = () => {
         }
     }, [])
 
-    console.log("detailWeather", detailWeather)
+    //console.log("detailWeather", detailWeather)
     if (isLoading) {
         return <h2>request is still in process, loading..</h2>;
     }
@@ -34,22 +34,24 @@ const MarsWeather = () => {
     }); 
 
 
-  console.log("lastSevenDays", lastSevenDays)
+  //console.log("lastSevenDays", lastSevenDays)
 
+  console.log(setDetailWeather)
 
     return (
         <div>
             <h2>Weather on Mars</h2>
             <DetailWeatherCard data={detailWeather}/>
+            <div className="previous">
             <h3>Previous 7 days</h3>
-            <div className="weather-container">
-                {lastSevenDays.map((element, index) => {
-                    return (
-                        <CardWeather data={element} key={index} state={setDetailWeather}/>
-                    )
-                })}
+                <div className="weather-cards-container">
+                    {lastSevenDays.map((element, index) => {
+                        return (
+                            <CardWeather data={element} key={index} setDetailWeather={setDetailWeather}/>
+                        )
+                    })}
+                </div>
             </div>
-            
         </div>
     )
 }
