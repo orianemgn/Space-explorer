@@ -81,6 +81,7 @@ a {
 }
 .submenu-active .submenu {
    display: block;
+   z-index: 99999;
 }
 .has-submenu i {
     font-size: 12px;
