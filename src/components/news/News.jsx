@@ -8,6 +8,7 @@ function News(params) {
   const [items, setItems] = useState([]);
   const [visible, setVisible] = useState(8);
 
+  // function to add more cards on news page
   const showMoreItems = () => {
     setVisible((prevValue) => prevValue + 3);
   };
