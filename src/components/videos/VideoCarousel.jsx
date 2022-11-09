@@ -1,32 +1,32 @@
 import React from "react";
 import "./VideoCarousel.css";
 import { Carousel } from "react-bootstrap";
-import Vid1 from "../../assests/Vid4.mp4";
-import Vid2 from "../../assests/Vid5.mp4";
-import Vid3 from "../../assests/Vid6.mp4";
+// import Vid1 from "../../assests/Vid4.mp4";
+// import Vid2 from "../../assests/Vid5.mp4";
+// import Vid3 from "../../assests/Vid6.mp4";
 import YoutubeVideo from "../youtube-video";
 // import "bootstrap/dist/css/bootstrap.min.css"
 
-const videoProperties = [
-  {
-    id: 1,
-    title: "Space",
-    src: Vid1,
-    credit: "Video from Pexels by Frank Cone",
-  },
-  {
-    id: 2,
-    title: "Space",
-    src: Vid2,
-    credit: "Video from Pexels by Michael Herren",
-  },
-  {
-    id: 3,
-    title: "Space",
-    src: Vid3,
-    credit: "Video from Pexels by Pixabay",
-  },
-];
+// const videoProperties = [
+//   {
+//     id: 1,
+//     title: "Space",
+//     src: Vid1,
+//     credit: "Video from Pexels by Frank Cone",
+//   },
+//   {
+//     id: 2,
+//     title: "Space",
+//     src: Vid2,
+//     credit: "Video from Pexels by Michael Herren",
+//   },
+//   {
+//     id: 3,
+//     title: "Space",
+//     src: Vid3,
+//     credit: "Video from Pexels by Pixabay",
+//   },
+// ];
 
 const youtubeVideos = [
   "gosjiD288Jk",
