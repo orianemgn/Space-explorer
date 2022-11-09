@@ -32,7 +32,10 @@ const youtubeVideos = [
   "gosjiD288Jk",
   "hlGCcM_V3HI",
   "-YUYLbjl7Sk",
-  "nq4tT68UoCg"
+  "nq4tT68UoCg",
+  "atjAURP2_9o",
+  "wnhvanMdx4s",
+  "X-XZx1o_w-A"
 ]
 const VideoCarousel = () => {
  
