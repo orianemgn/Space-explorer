@@ -36,7 +36,7 @@ const MarsWeather = () => {
 
   //console.log("lastSevenDays", lastSevenDays)
 
-  console.log(setDetailWeather)
+  //console.log(setDetailWeather)
 
     return (
         <div className="focus-on-mars">
