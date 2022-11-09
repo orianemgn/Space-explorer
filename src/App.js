@@ -1,14 +1,14 @@
-import './App.css';
-import ImageOfTheDay from './pages/ImageOfTheDay';
-import PlanetsGlossary from './pages/PlanetsGlossary';
-import FocusOnMars from './pages/FocusOnMars';
-import Home from './pages/Home';
-import News from './pages/News';
-import Videos from './pages/Videos';
-import AboutUs from './pages/AboutUs';
-import Header from './components/navbar/Header';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import "./App.css";
+import ImageOfTheDay from "./pages/ImageOfTheDay";
+import PlanetsGlossary from "./pages/PlanetsGlossary";
+import FocusOnMars from "./pages/FocusOnMars";
+import Home from "./pages/Home";
+import News from "./pages/News";
+import Videos from "./pages/Videos";
+import AboutUs from "./pages/AboutUs";
+import Header from "./components/navbar/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -26,10 +26,9 @@ function App() {
         </Routes>
       </Router>
       <div>
-
+        <Footer />
       </div>
     </div>
-
   );
 }
 
