@@ -1,4 +1,5 @@
-
+import Neptune from '../../../assests/planets/neptune.png'; 
+import Uranus from '../../../assests/planets/uranus.png';
 
 const PlanetsCards = (props) => {
 
@@ -6,10 +7,13 @@ const PlanetsCards = (props) => {
 
     return (
         <div className="planet-card">
-            <h3>{englishName}</h3>
-            <p>{isPlanet? "is planet" : "is no planet"}</p>
-            <p> Density: {density}</p>
-            <p> Gravity: {gravity}</p>  
+            <img className="rotate linear infinite" src={Neptune} alt={englishName}/>
+            <div>
+                <h2>{englishName}</h2>
+                <p>{isPlanet? "is planet" : "is no planet"}</p>
+                <p> Density: {density}</p>
+                <p> Gravity: {gravity}</p>  
+            </div>
         </div>
     )
     

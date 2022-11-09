@@ -34,7 +34,7 @@ const SolarSystem = () => {
       //console.log(apodResp.data)
     return(
         <div className="solar-page">
-            <h1>PlanetsGlossary</h1>
+            <h1>Planets Glossary</h1>
             <PlanetsCards data={detailPlanet}/>
             <div className="solar-container">
             {solarSystemFiltered.map((element, index) => {
