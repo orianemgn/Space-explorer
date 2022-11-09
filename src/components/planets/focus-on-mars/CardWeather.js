@@ -7,9 +7,10 @@ const CardWeather = (props) => {
     //pass as prop the seter of the state
 
     const {sol, terrestrial_date, max_temp, min_temp, sunrise, sunset, atmo_opacity} = props.data;
+    const design = "active";
 
     return (
-            <div className="weather-cards" onClick={() => setDetailWeather({sol, terrestrial_date, max_temp, min_temp, sunrise, sunset, atmo_opacity})}>
+            <div className="weather-cards" onClick={() => setDetailWeather({sol, terrestrial_date, max_temp, min_temp, sunrise, sunset, atmo_opacity, design})}>
                <h4>Sol {sol}</h4>
                <p>{terrestrial_date}</p>
                <hr/>

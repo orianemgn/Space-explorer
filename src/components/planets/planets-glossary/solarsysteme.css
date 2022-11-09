@@ -1,3 +1,14 @@
+.solar-page {
+    background-image: url('../../../assests/andy-holmes-rCbdp8VCYhQ-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    height: 1200px; 
+    color: white; 
+}
+
+
 .solar-container {
     display: flex;
     flex-wrap: wrap;
@@ -5,9 +16,16 @@
     align-items: center;
 }
 
+.planet-card {
+    border: 1px white solid; 
+    padding: 20px; 
+    margin: auto; 
+    width: 50%;
+    text-align: center; 
+}
+
 .solar-cards {
-    border: 1px #444 solid; 
+    border: 1px white solid; 
     padding: 20px; 
     margin: 15px; 
-
 }

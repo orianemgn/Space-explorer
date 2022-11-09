@@ -1,9 +1,12 @@
 import {useFetch} from '../../useFetch/useFetch';
+import {useState} from 'react'; 
 import PlanetsCards from './PlanetsCards';
+import PlanetsButton from './PlanetsButton';
 import './solarsysteme.css';
 
 const SolarSystem = () => {
     const [apodResp, errorResp, isLoading] = useFetch('https://api.le-systeme-solaire.net/rest/bodies/');
+    const [detailPlanet, setDetailPlanet] =  useState({})
 
     if (isLoading) {
         return <h2>request is still in process, loading..</h2>;
@@ -30,22 +33,25 @@ const SolarSystem = () => {
 
       //console.log(apodResp.data)
     return(
-        <>
+        <div className="solar-page">
+            <h1>PlanetsGlossary</h1>
+            <PlanetsCards data={detailPlanet}/>
             <div className="solar-container">
             {solarSystemFiltered.map((element, index) => {
                 console.log(element.isPlanet)
                 return (
-                    <PlanetsCards data={element} /> 
+                    <PlanetsButton data={element} key={index} setDetailPlanet={setDetailPlanet} /> 
                     )                
             })}
             
             </div>
+
             <div>
                 <h2>No planet</h2>
-                <PlanetsCards data={moon[0]}/>
-                <PlanetsCards data={sun[0]}/>
+                <PlanetsButton data={moon[0]}/>
+                <PlanetsButton data={sun[0]}/>
             </div>
-        </>
+        </div>
         
     )
 }

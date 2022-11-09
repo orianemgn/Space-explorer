@@ -5,11 +5,11 @@ import sun from '../../../assests/icons8-été-96.png'
 const DetailWeatherCard = (props) => {
 
     
-    const {sol, terrestrial_date, max_temp, min_temp, sunrise, sunset, atmo_opacity} = props.data;
+    const {sol, terrestrial_date, max_temp, min_temp, sunrise, sunset, atmo_opacity, design} = props.data;
 
 
     return (
-            <div className="detail-card">
+            <div className={`detail-card ${design}`}>
                 <h3>DetailWeatherCard</h3>
                 <h4>Sol: {sol}</h4>
                 <p>{terrestrial_date}</p>

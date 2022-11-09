@@ -8,7 +8,7 @@ const MarsWeather = () => {
 
     //state with with selected day 
     const [marsWeatherResp, errorResp, isLoading] = useFetch(`https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json`);
-    const [detailWeather, setDetailWeather] = useState({})
+    const [detailWeather, setDetailWeather] = useState([])
 
     useEffect(() => {
         if(isLoading === false){
@@ -18,7 +18,7 @@ const MarsWeather = () => {
 
     //console.log("detailWeather", detailWeather)
     if (isLoading) {
-        return <h2>request is still in process, loading..</h2>;
+        return <p>request is still in process, loading..</p>;
     }
 
     if (errorResp) {
@@ -39,7 +39,8 @@ const MarsWeather = () => {
   console.log(setDetailWeather)
 
     return (
-        <div>
+        <div className="focus-on-mars">
+            <h1>Focus on Mars</h1>
             <h2>Weather on Mars</h2>
             <DetailWeatherCard data={detailWeather}/>
             <div className="previous">
