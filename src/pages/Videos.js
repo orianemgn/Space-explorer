@@ -1,9 +1,13 @@
-import React from 'react'
 
-const Videos = () => {
+import { ParallaxProvider } from "react-scroll-parallax";
+import VideoPage from "../components/video/VideoPage";
+
+export default function Videos() {
   return (
-    <div>Videos</div>
-  )
+    <>
+    <ParallaxProvider>
+      <VideoPage />
+      </ParallaxProvider>
+      </>
+  );
 }
-
-export default Videos
