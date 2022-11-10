@@ -1,11 +1,18 @@
 import "./app.css";
-import ModalBtn from "../contact modal/ModalBtn";
+import { FooterButton } from "../footer-button";
+import { useState } from "react";
+import LinksModal from "../contact modal/LinksModal";
 
 function Footer() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="footer">
-      <ModalBtn icon={<i class="fa-brands fa-square-github"></i>} />
-
+      <FooterButton
+        onClick={() => setOpenModal(true)}
+        title={<i class="fa-brands fa-square-github"></i>}
+      />
+      {openModal && <LinksModal onClick={() => setOpenModal(false)} />}
       <a href="#" target="_blank">
         LINK 1
       </a>

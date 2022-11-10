@@ -1,12 +1,11 @@
 import React from "react";
-import "./contactModal.css";
+import "./LinksModal.css";
 
-function ContactModal({ open, onClose }) {
-  if (!open) return null;
+function LinksModal({ onClick }) {
   return (
-    <div className="overlay">
+    <div className="overlay" onClick={onClick}>
       <div className="modalContainer">
-        <p className="closeBtn" onClick={onClose}>
+        <p className="closeBtn" onClick={onClick}>
           close
         </p>
         <a href="https://github.com/orianemgn" target="_blank" alt="Oriane">
@@ -23,4 +22,4 @@ function ContactModal({ open, onClose }) {
   );
 }
 
-export default ContactModal;
+export default LinksModal;
