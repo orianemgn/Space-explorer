@@ -1,7 +1,7 @@
 import React from "react";
-import "./contactModal.css";
+import "./LinksModal.css";
 
-function ContactModal({ onClick }) {
+function LinksModal({ onClick }) {
   return (
     <div className="overlay" onClick={onClick}>
       <div className="modalContainer">
@@ -22,4 +22,4 @@ function ContactModal({ onClick }) {
   );
 }
 
-export default ContactModal;
+export default LinksModal;

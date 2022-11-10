@@ -1,7 +1,7 @@
 import "./app.css";
 import { FooterButton } from "../footer-button";
 import { useState } from "react";
-import ContactModal from "../contact modal/ContactModal";
+import LinksModal from "../contact modal/LinksModal";
 
 function Footer() {
   const [openModal, setOpenModal] = useState(false);
@@ -12,7 +12,7 @@ function Footer() {
         onClick={() => setOpenModal(true)}
         title={<i class="fa-brands fa-square-github"></i>}
       />
-      {openModal && <ContactModal onClick={() => setOpenModal(false)} />}
+      {openModal && <LinksModal onClick={() => setOpenModal(false)} />}
       <a href="#" target="_blank">
         LINK 1
       </a>
