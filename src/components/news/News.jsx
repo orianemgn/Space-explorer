@@ -10,7 +10,7 @@ function News(params) {
 
   // function to add more cards on news page
   const showMoreItems = () => {
-    setVisible((prevValue) => prevValue + 3);
+    setVisible((prevValue) => prevValue + 4);
   };
 
   useEffect(() => {
