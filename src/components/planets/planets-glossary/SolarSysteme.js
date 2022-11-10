@@ -31,16 +31,11 @@ const SolarSystem = () => {
     }
   }, [solarSystemFiltered]);
 
-  // if (isLoading || solarSystemFiltered.length === 0) {
-  //   return <h2>request is still in process, loading..</h2>;
-  // }
-
   if (errorResp) {
     console.log("error: ", errorResp);
     return <h2>an error has occurred, please contact the support</h2>;
   }
 
-  // renomer PlanetCard -> Plane
   return (
     <div className="solar-page">
       {isLoading ? (
@@ -63,8 +58,8 @@ const SolarSystem = () => {
           </div>
 
           <div>
-            <h2>No planet</h2>
-            {/* <PlanetsButton data={moon[0]} />
+            {/* <h2>No planet</h2>
+            <PlanetsButton data={moon[0]} />
         <PlanetsButton data={sun[0]} /> */}
           </div>
         </>
@@ -75,30 +70,5 @@ const SolarSystem = () => {
 
 export default SolarSystem;
 
-//console.log("planets", solarSystemFiltered);
-
-//console.log("detail planet", detailPlanet);
-//useEffect(() => {
-//  if (solarSystemFiltered.length) {
-//    const filteredPlanetsItems = planetsItemsList.filter(
-//      (element) => element.title === detailPlanet.englishName
-//    );
-//    setMoreInfos(filteredPlanetsItems[0]);
-//  }
-//}, [solarSystemFiltered, detailPlanet]);
-//
-//console.log("More", moreInfos);
-
-//   const solarSystem = apiResp.data.bodies;
-
-//   const solarSystemFiltered = solarSystem.filter(
-//     (element) => element.isPlanet === true
-//   );
-
 //   const moon = solarSystem.filter((element) => element.englishName === "Moon");
 //   const sun = solarSystem.filter((element) => element.englishName === "Sun");
-
-//console.log("moon", moon)
-//console.log("solar filter", solarSystemFiltered)
-//console.log(solarsystem)
-//console.log(apiResp.data)

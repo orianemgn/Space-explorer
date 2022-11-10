@@ -9,14 +9,14 @@ const PlanetsButton = (props) => {
   ).img;
 
   return (
-    <div
-      className="solar-cards"
+    <button
+      className="solar-buttons"
       onClick={() =>
         setDetailPlanet({ englishName, isPlanet, density, gravity, image })
       }
     >
-      <h3>{englishName}</h3>
-    </div>
+      {englishName}
+    </button>
   );
 };
 
