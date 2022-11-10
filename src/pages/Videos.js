@@ -1,14 +1,9 @@
-// import React from "react";
-// import BackgroundVideo from "../components/videos/BackgroundVideo";
-// import VideoCarousel from "../components/videos/VideoCarousel";
+import React from 'react'
 
-// function Videos() {
-//   return (
-//     <div>
-//       <VideoCarousel />
-//       <BackgroundVideo />
-      
-//     </div>
-//   );
-// }
-// export default Videos;
+const Videos = () => {
+  return (
+    <div>Videos</div>
+  )
+}
+
+export default Videos
