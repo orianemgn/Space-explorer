@@ -1,12 +1,35 @@
-import {useFetch} from '../../useFetch/useFetch';
-import './MarsWeather.css'
+import { useFetch } from "../../useFetch/useFetch";
+import { useState, useEffect } from "react";
+import "./MarsWeather.css";
+import CardWeather from "./CardWeather";
+import DetailWeatherCard from "./DetailWeatherCard";
 
 const MarsWeather = () => {
+  //state with with selected day
+  const [marsWeatherResp, errorResp, isLoading] = useFetch(
+    `https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json`
+  );
 
-    const [marsWeatherResp, errorResp, isLoading] = useFetch(`https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json`);
+  const [lastSevenDays, setLastSevenDays] = useState([]);
+  const [detailWeather, setDetailWeather] = useState([]);
 
-if (isLoading) {
-    return <h2>request is still in process, loading..</h2>;
+  useEffect(() => {
+    if (!isLoading && marsWeatherResp) {
+      const data = marsWeatherResp.data.soles;
+      setLastSevenDays(
+        data.filter((element, index) => {
+          if (index < 7) {
+            return element;
+          }
+        })
+      );
+      setDetailWeather(lastSevenDays[0]);
+    }
+  }, [marsWeatherResp, isLoading, lastSevenDays]);
+
+  //console.log("detailWeather", detailWeather)
+  if (isLoading) {
+    return <p>request is still in process, loading..</p>;
   }
 
   if (errorResp) {
@@ -14,42 +37,31 @@ if (isLoading) {
     return <h2>an error has occurred, please contact the support</h2>;
   }
 
+  //console.log("lastSevenDays", lastSevenDays)
 
-  
-  const data = marsWeatherResp.data.soles; 
+  console.log("detail weather", detailWeather);
 
-
-  const lastSevenDays = data.filter((element, index) => {
-    if(index < 7){
-        return element
-    }
-  }); 
-
-  console.log("lastSevenDays", lastSevenDays)
-
-
-    return (
-        <div>
-            <h2>Weather on Mars</h2>
-            <h3>Previous 7 days</h3>
-            <div className="weather-container">
-                {lastSevenDays.map((element, index) => {
-                    return (
-                        <div className="weather-cards" key={index}>
-                            <h4>Sol: {element.sol}</h4>
-                            <p>{element.terrestrial_date}</p>
-                            <p>Temp, max: {element.max_temp}</p>
-                            <p>min: {element.min_temp}</p>
-                            <p>Sunrise: {element.sunrise}</p>
-                            <p>Sunset: {element.sunset}</p>
-                            <p>{element.atmo_opacity}</p>
-                        </div>
-                    )
-                })}
-            </div>
-            
+  return (
+    <div className="focus-on-mars">
+      <h1>Focus on Mars</h1>
+      <h2>Weather on Mars</h2>
+      {detailWeather && <DetailWeatherCard data={detailWeather} />}
+      <div className="previous">
+        <h3>Previous 7 days</h3>
+        <div className="weather-cards-container">
+          {lastSevenDays.map((element, index) => {
+            return (
+              <CardWeather
+                data={element}
+                key={index}
+                setDetailWeather={setDetailWeather}
+              />
+            );
+          })}
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default MarsWeather; 
+export default MarsWeather;
