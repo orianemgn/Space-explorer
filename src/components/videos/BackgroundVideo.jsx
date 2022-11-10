@@ -1,7 +1,7 @@
 import React from "react";
 import videoBg from "../../assests/Vid1.mp4";
 import "./BackgroundVideo.css";
-import "bootstrap/dist/css/bootstrap.css";
+//import "bootstrap/dist/css/bootstrap.css";
 
 const BackgroundVideo = () => {
   return (
