@@ -8,8 +8,8 @@ const Home = () => {
       <video src={videoBg} autoPlay loop muted />
       <div className="content">
         <h1>Welcome</h1>
-        <p>to</p>
-        <h2>Space Explorer</h2>
+        <h2>to</h2>
+        <h1>Space Explorer</h1>
       </div>
     </div>
   );
