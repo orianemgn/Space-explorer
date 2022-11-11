@@ -23,11 +23,14 @@ const MarsWeather = () => {
           }
         })
       );
-      setDetailWeather(lastSevenDays[0]);
     }
-  }, [marsWeatherResp, isLoading, lastSevenDays]);
+  }, [marsWeatherResp, isLoading]);
 
-  //console.log("detailWeather", detailWeather)
+  useEffect(() => {
+    setDetailWeather(lastSevenDays[0]);
+  }, [lastSevenDays]);
+
+  // console.log("detailWeather", detailWeather);
   if (isLoading) {
     return <p>request is still in process, loading..</p>;
   }
