@@ -8,16 +8,12 @@
   padding-top: 100px;
 }
 
-.solar-page h1 {
-  text-align: center;
-  margin: 100px;
-}
-
 .solar-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .planet-card {
@@ -87,9 +83,5 @@
   .planet-card {
     flex-direction: row;
     width: 60%;
-  }
-  .solar-page h1 {
-    text-align: left;
-    margin: 100px;
   }
 }
