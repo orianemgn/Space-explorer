@@ -13,7 +13,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
 }
 
 .planet-card {
@@ -34,6 +33,11 @@
 
 .planet-card img {
   width: 400px;
+  margin-top: 200px;
+}
+
+.planet-card img.uranus {
+  margin-top: 0;
 }
 
 .rotate {
