@@ -21,12 +21,14 @@ const SolarSystem = () => {
     }
   }, [apiResp, isLoading]);
 
+  console.log("solarSystemFiltered:", solarSystemFiltered);
+
   useEffect(() => {
     if (solarSystemFiltered.length) {
       const image = planetsItemsList.find(
-        (planet) => planet.title === "Uranus"
+        (planet) => planet.title === "Neptune"
       ).img;
-      const planet = { ...solarSystemFiltered[0], image };
+      const planet = { ...solarSystemFiltered[1], image };
       setDetailPlanet(planet);
     }
   }, [solarSystemFiltered]);
@@ -42,8 +44,6 @@ const SolarSystem = () => {
         <h2>request is still in process, loading..</h2>
       ) : (
         <>
-          <h1>Planets Glossary</h1>
-          <PlanetCard data={detailPlanet} />
           <div className="solar-container">
             {solarSystemFiltered.map((planet, index) => {
               //console.log(element.isPlanet);
@@ -56,6 +56,7 @@ const SolarSystem = () => {
               );
             })}
           </div>
+          <PlanetCard data={detailPlanet} />
 
           <div>
             {/* <h2>No planet</h2>
