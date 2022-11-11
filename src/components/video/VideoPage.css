@@ -2,6 +2,13 @@
 html {
     scroll-behavior: smooth;
   }
+  .body-videopage {
+    content: "Proyectos";
+    
+    color: transparent;
+    -webkit-text-stroke: 1px #555;
+  }
+  
   
   .parallax-item {
     display: flex;
