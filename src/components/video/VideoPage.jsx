@@ -1,14 +1,13 @@
 import React from "react";
-import { Parallax } from "react-scroll-parallax";
+
 import "./VideoPage.css";
 
 const parallax = document.getElementById("parallax");
 
-
 // Parallax Effect for DIV 1
 window.addEventListener("scroll", function () {
   let offset = window.pageYOffset;
-  parallax.style.backgroundPositionY = offset * 0.7 + "px";
+  parallax.style.backgroundPositionY = offset * 0.5 + "px";
   // DIV 1 background will move slower than other elements on scroll.
 }); 
 
