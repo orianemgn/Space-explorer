@@ -17,5 +17,6 @@
 .spinner-container {
   display: flex;
   justify-content: center;
-  margin: 0, 50%;
+  padding-top: 25%;
+  padding-bottom: 25%;
 }
