@@ -9,6 +9,7 @@ import AboutUs from "./pages/AboutUs";
 import Header from "./components/navbar/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import { Spinner } from "react-bootstrap";
 
 function App() {
   return (
