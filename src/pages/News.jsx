@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NewsCard from "../components/news-card/NewsCard";
 import "./News.css";
+import { motion } from "framer-motion";
 import { useFetch } from "../hooks/useFetch/useFetch";
 import LoadingSpinner from "../components/news-card/loading-spinner/LoadingSpinner";
 
@@ -8,7 +9,7 @@ function News() {
   const newsFetch = "https://news-space.p.rapidapi.com/";
   const [newsResp, errorResp, isLoading] = useFetch(newsFetch);
 
-  const [visible, setVisible] = useState(8);
+  const [visible, setVisible] = useState(9);
 
   // function to add more cards on news page
   const showMoreItems = () => {
@@ -21,12 +22,27 @@ function News() {
   return (
     <div className="news">
       <h1>NEWS</h1>
-      {newsResp.data.slice(0, visible).map((item) => (
-        <NewsCard title={item.title} source={item.source} url={item.url} />
-      ))}
-      <button className="more-btn" onClick={showMoreItems}>
+      {newsResp.data
+        .filter(
+          (item, index) =>
+            index === newsResp.data.findIndex((other) => item.url === other.url)
+        )
+        .slice(1, visible)
+        .map((item, index) => (
+          <NewsCard
+            key={index}
+            title={item.title}
+            source={item.source}
+            url={item.url}
+          />
+        ))}
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="more-btn"
+        onClick={showMoreItems}>
         SEE MORE NEWS UPDATES
-      </button>
+      </motion.button>
     </div>
   );
 }
