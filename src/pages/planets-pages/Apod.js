@@ -1,6 +1,7 @@
 import CardApod from "../../components/planets/image-of-the-day/CardApod";
 import { useFetch } from "../../hooks/useFetch/useFetch";
 import "./apod.css";
+import LoadingSpinner from "../../news-card/loading-spinner/LoadingSpinner";
 
 const Apod = () => {
   const apodURL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_O_API_KEY}`;
@@ -8,7 +9,7 @@ const Apod = () => {
   const [apodResp, errorResp, isLoading] = useFetch(apodURL);
 
   if (isLoading) {
-    return <h2>request is still in process, loading..</h2>;
+    return <LoadingSpinner />;
   }
 
   if (errorResp) {
@@ -19,8 +20,7 @@ const Apod = () => {
   return (
     <div
       className="background-apod"
-      style={{ backgroundImage: `url(${apodResp.data.url})` }}
-    >
+      style={{ backgroundImage: `url(${apodResp.data.url})` }}>
       <div className="apod-container">
         <CardApod apod={apodResp.data} />
       </div>
