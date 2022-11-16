@@ -46,26 +46,32 @@ const MarsWeather = () => {
 
   return (
     <div className="focus-on-mars">
-      <h1>
-        Weather
-        <span>on</span>
-        Mars
-      </h1>
-      {detailWeather && <DetailWeatherCard data={detailWeather} />}
-      <div className="previous">
-        <h3>Previous 7 days</h3>
-        <div className="weather-cards-container">
-          {lastSevenDays.map((element, index) => {
-            return (
-              <CardWeather
-                data={element}
-                key={index}
-                setDetailWeather={setDetailWeather}
-              />
-            );
-          })}
-        </div>
-      </div>
+      {isLoading ? (
+        <h2>request is still in process, loading..</h2>
+      ) : (
+        <>
+          <h1>
+            Weather
+            <span>on</span>
+            Mars
+          </h1>
+          {detailWeather && <DetailWeatherCard data={detailWeather} />}
+          <div className="previous">
+            <h3>Previous 7 days</h3>
+            <div className="weather-cards-container">
+              {lastSevenDays.map((element, index) => {
+                return (
+                  <CardWeather
+                    data={element}
+                    key={index}
+                    setDetailWeather={setDetailWeather}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

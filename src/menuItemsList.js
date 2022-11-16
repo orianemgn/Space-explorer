@@ -39,13 +39,13 @@ export const menuItems = [
     className: "item",
   },
   {
-    title: "GitHub",
-    url: "https://github.com/orianemgn/Space-explorer",
-    className: "item button",
+    title: "The crew",
+    url: "/the-crew",
+    className: "item",
   },
   {
-    title: "About us",
-    url: "/about-us",
+    title: "GitHub",
+    url: "https://github.com/orianemgn/Space-explorer",
     className: "item button secondary",
   },
 ];

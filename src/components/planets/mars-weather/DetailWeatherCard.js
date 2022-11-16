@@ -1,7 +1,5 @@
 import "../../../pages/planets-pages/MarsWeather.css";
-import sun from "../../../assests/mars/icons8-été-96.png";
-//import sunsetIcon from "../../../assests/mars/icons8-sunset-64.png";
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const DetailWeatherCard = (props) => {
   const {
     sol,
@@ -34,8 +32,8 @@ const DetailWeatherCard = (props) => {
           ></i>
           <p>
             <b>Atmosphere: </b>
-            {atmo_opacity}
           </p>
+          <p>{atmo_opacity}</p>
         </div>
         <div>
           <i className="fa-solid fa-cloud-moon"></i>
