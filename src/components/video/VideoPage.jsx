@@ -17,7 +17,7 @@ export default function VideoPage() {
   useEffect(() => {
     function handleParallax() {
       let offset = window.pageYOffset;
-      parallax.style.backgroundPositionY = offset * 0.7 + "px";
+      parallax.style.backgroundPositionY = offset * 0.8 + "px";
       // DIV 1 background will move slower than other elements on scroll.
     }
     window.addEventListener("scroll", handleParallax);
