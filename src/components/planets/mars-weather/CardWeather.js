@@ -1,4 +1,4 @@
-import "./MarsWeather.css";
+import "../../../pages/planets-pages/MarsWeather.css";
 
 const CardWeather = (props) => {
   const { setDetailWeather } = props;
@@ -14,7 +14,6 @@ const CardWeather = (props) => {
     sunset,
     atmo_opacity,
   } = props.data;
-  const design = "active";
 
   return (
     <div
@@ -28,7 +27,6 @@ const CardWeather = (props) => {
           sunrise,
           sunset,
           atmo_opacity,
-          design,
         })
       }
     >

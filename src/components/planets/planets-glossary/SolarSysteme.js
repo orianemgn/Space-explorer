@@ -1,4 +1,4 @@
-import { useFetch } from "../../useFetch/useFetch";
+import { useFetch } from "../../../hooks/useFetch/useFetch";
 import { useState, useEffect } from "react";
 import PlanetCard from "./PlanetCard";
 import PlanetsButton from "./PlanetsButton";
@@ -46,7 +46,6 @@ const SolarSystem = () => {
         <>
           <div className="solar-container">
             {solarSystemFiltered.map((planet, index) => {
-              //console.log(element.isPlanet);
               return (
                 <PlanetsButton
                   planetDetails={planet}
@@ -57,7 +56,6 @@ const SolarSystem = () => {
             })}
           </div>
           <PlanetCard data={detailPlanet} />
-
           <div>
             {/* <h2>No planet</h2>
             <PlanetsButton data={moon[0]} />
