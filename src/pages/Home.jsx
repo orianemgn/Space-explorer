@@ -1,6 +1,6 @@
 import React from "react";
 import videoBg from "../assests/Vid1.mp4";
-import "./Home.css"
+import "./home.css"
 
 
 const Home = () => {

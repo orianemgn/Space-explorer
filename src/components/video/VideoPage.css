@@ -2,13 +2,6 @@
 html {
     scroll-behavior: smooth;
   }
-  .body-videopage {
-    content: "Proyectos";
-    
-    color: transparent;
-    -webkit-text-stroke: 1px #555;
-  }
-  
   
   .parallax-item {
     display: flex;
@@ -18,6 +11,11 @@ html {
     font-family: Montserrat, sans-serif;
     width: 100%;
     min-height: 100vh;
+  }
+  .react-player {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
   }
   
   .parallax-item h2 {
