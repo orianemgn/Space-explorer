@@ -8,11 +8,6 @@
   padding-top: 100px;
 }
 
-.solar-page h1 {
-  text-align: center;
-  margin: 100px;
-}
-
 .solar-container {
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +33,11 @@
 
 .planet-card img {
   width: 400px;
+  margin-top: 200px;
+}
+
+.planet-card img.uranus {
+  margin-top: 0;
 }
 
 .rotate {
@@ -87,9 +87,5 @@
   .planet-card {
     flex-direction: row;
     width: 60%;
-  }
-  .solar-page h1 {
-    text-align: left;
-    margin: 100px;
   }
 }

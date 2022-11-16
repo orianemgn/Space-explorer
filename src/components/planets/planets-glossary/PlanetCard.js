@@ -3,7 +3,15 @@ const PlanetCard = (props) => {
 
   return (
     <div className="planet-card">
-      <img className="rotate linear infinite" src={image} alt={englishName} />
+      <img
+        className={
+          englishName === "Uranus"
+            ? "rotate linear infinite uranus"
+            : "rotate linear infinite"
+        }
+        src={image}
+        alt={englishName}
+      />
       <div>
         <h2>{englishName}</h2>
         <p>{isPlanet ? "is planet" : "is no planet"}</p>
