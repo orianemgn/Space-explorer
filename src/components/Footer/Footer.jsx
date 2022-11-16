@@ -3,6 +3,21 @@ import { FooterButton } from "../footer-button";
 import { useState } from "react";
 import LinksModal from "../contact modal/LinksModal";
 
+const gitHubLinks = [
+  {
+    userName: "Oriane",
+    link: "https://github.com/orianemgn",
+  },
+  {
+    userName: "StefanIv",
+    link: "https://github.com/Stef14-bit",
+  },
+  {
+    userName: "StefanDs",
+    link: "https://github.com/StefanDsd",
+  },
+];
+
 function Footer() {
   const [openModal, setOpenModal] = useState(false);
 
@@ -10,12 +25,18 @@ function Footer() {
     <div className="footer">
       <FooterButton
         onClick={() => setOpenModal(true)}
-        title={<i class="fa-brands fa-square-github"></i>}
+        title={<i className="fa-brands fa-square-github"></i>}
       />
-      {openModal && <LinksModal onClick={() => setOpenModal(false)} />}
-      <a href="#" target="_blank">
-        LINK 1
-      </a>
+      {openModal && (
+        <LinksModal
+          gitHubLinks={gitHubLinks}
+          onClick={() => setOpenModal(false)}
+        />
+      )}
+      <FooterButton
+        onClick={() => setOpenModal(true)}
+        title={<i class="fa-brands fa-linkedin"></i>}
+      />
       <a href="#" target="_blank">
         LINK 2
       </a>
