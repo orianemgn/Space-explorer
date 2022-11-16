@@ -20,7 +20,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/image-of-the-day" element={<Apod />} />
           <Route path="/planets-glossary" element={<PlanetsGlossary />} />
-          <Route path="/focus-on-mars" element={<MarsWeather />} />
+          <Route path="/weather-on-mars" element={<MarsWeather />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/about-us" element={<AboutUs />} />
         </Routes>

@@ -40,13 +40,17 @@ const MarsWeather = () => {
     return <h2>an error has occurred, please contact the support</h2>;
   }
 
-  //console.log("lastSevenDays", lastSevenDays)
+  console.log("lastSevenDays", lastSevenDays);
 
   console.log("detail weather", detailWeather);
 
   return (
     <div className="focus-on-mars">
-      <h1>Weather on Mars</h1>
+      <h1>
+        Weather
+        <span>on</span>
+        Mars
+      </h1>
       {detailWeather && <DetailWeatherCard data={detailWeather} />}
       <div className="previous">
         <h3>Previous 7 days</h3>
