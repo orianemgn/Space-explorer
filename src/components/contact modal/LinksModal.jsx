@@ -1,16 +1,24 @@
 import React from "react";
 import "./LinksModal.css";
 
-function LinksModal({ onClick, userName, links }) {
+function LinksModal({ onClick, gitHubLinks }) {
   return (
     <div className="overlay" onClick={onClick}>
       <div className="modalContainer">
         <p className="closeBtn" onClick={onClick}>
           close
         </p>
-        <a href={links} target="_blank" rel="noreferrer" alt={userName}>
-          {userName}
-        </a>
+        {gitHubLinks.map((ele) => {
+          return (
+            <a
+              href={ele.link}
+              target="_blank"
+              rel="noreferrer"
+              alt={ele.userName}>
+              {ele.userName}
+            </a>
+          );
+        })}
       </div>
     </div>
   );

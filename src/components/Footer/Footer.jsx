@@ -9,11 +9,11 @@ const gitHubLinks = [
     link: "https://github.com/orianemgn",
   },
   {
-    userName: "Stefan Iv",
+    userName: "StefanIv",
     link: "https://github.com/Stef14-bit",
   },
   {
-    userName: "Stefan Ds",
+    userName: "StefanDs",
     link: "https://github.com/StefanDsd",
   },
 ];
@@ -27,17 +27,16 @@ function Footer() {
         onClick={() => setOpenModal(true)}
         title={<i className="fa-brands fa-square-github"></i>}
       />
-      {openModal &&
-        gitHubLinks.map((e) => (
-          <LinksModal
-            userName={e.userName}
-            links={e.link}
-            onClick={() => setOpenModal(false)}
-          />
-        ))}
-      <a href="#" target="_blank">
-        LINK 1
-      </a>
+      {openModal && (
+        <LinksModal
+          gitHubLinks={gitHubLinks}
+          onClick={() => setOpenModal(false)}
+        />
+      )}
+      <FooterButton
+        onClick={() => setOpenModal(true)}
+        title={<i class="fa-brands fa-linkedin"></i>}
+      />
       <a href="#" target="_blank">
         LINK 2
       </a>
