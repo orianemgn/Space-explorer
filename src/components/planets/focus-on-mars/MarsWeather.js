@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./MarsWeather.css";
 import CardWeather from "./CardWeather";
 import DetailWeatherCard from "./DetailWeatherCard";
+import LoadingSpinner from "../../news-card/loading-spinner/LoadingSpinner";
 
 const MarsWeather = () => {
   //state with with selected day
@@ -32,7 +33,7 @@ const MarsWeather = () => {
 
   // console.log("detailWeather", detailWeather);
   if (isLoading) {
-    return <p>request is still in process, loading..</p>;
+    return <LoadingSpinner />;
   }
 
   if (errorResp) {
