@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NewsCard from "../components/news-card/NewsCard";
 import "./News.css";
-import { useFetch } from "../components/useFetch/useFetch";
+import { useFetch } from "../hooks/useFetch/useFetch";
 import LoadingSpinner from "../components/news-card/loading-spinner/LoadingSpinner";
 
 function News() {
