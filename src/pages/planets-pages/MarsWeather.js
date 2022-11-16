@@ -5,7 +5,6 @@ import CardWeather from "../../components/planets/mars-weather/CardWeather";
 import DetailWeatherCard from "../../components/planets/mars-weather/DetailWeatherCard";
 
 const MarsWeather = () => {
-  //state with with selected day
   const [marsWeatherResp, errorResp, isLoading] = useFetch(
     `https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json`
   );
@@ -30,19 +29,10 @@ const MarsWeather = () => {
     setDetailWeather(lastSevenDays[0]);
   }, [lastSevenDays]);
 
-  // console.log("detailWeather", detailWeather);
-  if (isLoading) {
-    return <p>request is still in process, loading..</p>;
-  }
-
   if (errorResp) {
     console.log("error: ", errorResp);
     return <h2>an error has occurred, please contact the support</h2>;
   }
-
-  console.log("lastSevenDays", lastSevenDays);
-
-  console.log("detail weather", detailWeather);
 
   return (
     <div className="focus-on-mars">

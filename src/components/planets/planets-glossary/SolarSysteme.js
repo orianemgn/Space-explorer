@@ -46,7 +46,6 @@ const SolarSystem = () => {
         <>
           <div className="solar-container">
             {solarSystemFiltered.map((planet, index) => {
-              //console.log(element.isPlanet);
               return (
                 <PlanetsButton
                   planetDetails={planet}
