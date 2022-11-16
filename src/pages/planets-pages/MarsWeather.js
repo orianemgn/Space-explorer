@@ -1,8 +1,8 @@
-import { useFetch } from "../../useFetch/useFetch";
+import { useFetch } from "../../hooks/useFetch/useFetch";
 import { useState, useEffect } from "react";
 import "./MarsWeather.css";
-import CardWeather from "./CardWeather";
-import DetailWeatherCard from "./DetailWeatherCard";
+import CardWeather from "../../components/planets/mars-weather/CardWeather";
+import DetailWeatherCard from "../../components/planets/mars-weather/DetailWeatherCard";
 
 const MarsWeather = () => {
   //state with with selected day
@@ -46,8 +46,7 @@ const MarsWeather = () => {
 
   return (
     <div className="focus-on-mars">
-      <h1>Focus on Mars</h1>
-      <h2>Weather on Mars</h2>
+      <h1>Weather on Mars</h1>
       {detailWeather && <DetailWeatherCard data={detailWeather} />}
       <div className="previous">
         <h3>Previous 7 days</h3>

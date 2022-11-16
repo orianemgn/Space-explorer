@@ -1,7 +1,7 @@
 import "./App.css";
-import ImageOfTheDay from "./pages/ImageOfTheDay";
-import PlanetsGlossary from "./pages/PlanetsGlossary";
-import FocusOnMars from "./pages/FocusOnMars";
+import Apod from "./pages/planets-pages/Apod";
+import PlanetsGlossary from "./pages/planets-pages/PlanetsGlossary";
+import MarsWeather from "./pages/planets-pages/MarsWeather";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Videos from "./pages/Videos";
@@ -18,9 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/news" element={<News />} />
-          <Route path="/image-of-the-day" element={<ImageOfTheDay />} />
+          <Route path="/image-of-the-day" element={<Apod />} />
           <Route path="/planets-glossary" element={<PlanetsGlossary />} />
-          <Route path="/focus-on-mars" element={<FocusOnMars />} />
+          <Route path="/focus-on-mars" element={<MarsWeather />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/about-us" element={<AboutUs />} />
         </Routes>

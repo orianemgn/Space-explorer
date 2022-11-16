@@ -1,0 +1,78 @@
+.focus-on-mars {
+  background-image: url("../../assests/daniele-colucci-OtXJhYjbKeg-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+.focus-on-mars h1 {
+  color: white;
+  padding: 20px;
+}
+
+.detail-card {
+  background: white;
+  width: 30%;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  display: block;
+}
+
+.active {
+  display: block;
+}
+
+.previous {
+  margin-inline: 100px;
+}
+
+.weather-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.weather-cards {
+  margin: 5px;
+  padding: 10px;
+  font-size: 12px;
+  background: white;
+  border-radius: 5px;
+  transition: transform 0.2s; /* Animation */
+}
+
+.weather-cards:hover {
+  box-shadow: 10px 10px 23px 1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 10px 10px 23px 1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 10px 10px 23px 1px rgba(0, 0, 0, 0.33);
+  transform: scale(1.1);
+}
+
+.weather-cards p {
+  padding: 2px;
+}
+
+.weather-cards hr {
+  margin: 5px;
+}
+
+/*.button-weather {
+    background: transparent; 
+    border: 1px black solid;
+    color: black;
+    padding: 10px 15px; 
+    margin: 5px 0;
+    font-size: 11px;
+}*/
+
+@media screen and (min-width: 960px) {
+  .background-mars {
+    height: 1200px;
+  }
+}

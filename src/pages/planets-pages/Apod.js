@@ -1,5 +1,5 @@
-import ApodContainer from "./ApodContainer";
-import { useFetch } from "../../useFetch/useFetch";
+import CardApod from "../../components/planets/image-of-the-day/CardApod";
+import { useFetch } from "../../hooks/useFetch/useFetch";
 import "./apod.css";
 
 const Apod = () => {
@@ -22,7 +22,7 @@ const Apod = () => {
       style={{ backgroundImage: `url(${apodResp.data.url})` }}
     >
       <div className="apod-container">
-        <ApodContainer apod={apodResp.data} />
+        <CardApod apod={apodResp.data} />
       </div>
     </div>
   );
