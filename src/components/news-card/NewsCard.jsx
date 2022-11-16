@@ -4,7 +4,10 @@ import styles from "./styles.module.css";
 
 function NewsCard({ title, source, url }) {
   return (
-    <div className={styles.newsCard}>
+    <motion.div
+      whileInView={{ y: [100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.8, ease: "easeIn" }}
+      className={styles.newsCard}>
       <h2>{title}</h2>
       <p>Source: {source}</p>
 
@@ -13,7 +16,7 @@ function NewsCard({ title, source, url }) {
           Read More
         </motion.button>
       </a>
-    </div>
+    </motion.div>
   );
 }
 
