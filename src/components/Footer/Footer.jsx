@@ -44,7 +44,9 @@ function Footer() {
           onClick={() => setOpenModal(true)}
           title={<i className="fa-brands fa-linkedin"></i>}
         />
+
       </AnimatePresence>
+
     </div>
   );
 }

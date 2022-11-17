@@ -4,6 +4,8 @@ import PlanetCard from "./PlanetCard";
 import PlanetsButton from "./PlanetsButton";
 import "./solarsysteme.css";
 import { planetsItemsList } from "./planetsItemsList";
+import { PlanetImage } from "./PlanetImage";
+import LoadingSpinner from "../../news-card/loading-spinner/LoadingSpinner";
 
 const SolarSystem = () => {
   const [apiResp, errorResp, isLoading] = useFetch(
@@ -39,35 +41,34 @@ const SolarSystem = () => {
   }
 
   return (
-    <div className="solar-page">
-      {isLoading ? (
-        <h2>request is still in process, loading..</h2>
-      ) : (
-        <>
-          <div className="solar-container">
-            {solarSystemFiltered.map((planet, index) => {
-              return (
-                <PlanetsButton
-                  planetDetails={planet}
-                  key={index}
-                  setDetailPlanet={setDetailPlanet}
-                />
-              );
-            })}
-          </div>
-          <PlanetCard data={detailPlanet} />
-          <div>
-            {/* <h2>No planet</h2>
-            <PlanetsButton data={moon[0]} />
-        <PlanetsButton data={sun[0]} /> */}
-          </div>
-        </>
-      )}
+    <div className="galaxy-background">
+      <div className="planets-page">
+        {isLoading ? (
+          <LoadingSpinner />
+        ) : (
+          <>
+            <div className="planets-container">
+              <PlanetImage data={detailPlanet} />
+              <div className="planets-infos">
+                <div className="planets-btn-container">
+                  {solarSystemFiltered.map((planet, index) => {
+                    return (
+                      <PlanetsButton
+                        planetDetails={planet}
+                        key={index}
+                        setDetailPlanet={setDetailPlanet}
+                      />
+                    );
+                  })}
+                </div>
+                <PlanetCard data={detailPlanet} />
+              </div>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };
 
 export default SolarSystem;
-
-//   const moon = solarSystem.filter((element) => element.englishName === "Moon");
-//   const sun = solarSystem.filter((element) => element.englishName === "Sun");
