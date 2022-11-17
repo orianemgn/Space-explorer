@@ -4,6 +4,8 @@ import PlanetCard from "./PlanetCard";
 import PlanetsButton from "./PlanetsButton";
 import "./solarsysteme.css";
 import { planetsItemsList } from "./planetsItemsList";
+import { PlanetImage } from "./PlanetImage";
+import LoadingSpinner from "../../news-card/loading-spinner/LoadingSpinner";
 
 const SolarSystem = () => {
   const [apiResp, errorResp, isLoading] = useFetch(
@@ -41,21 +43,27 @@ const SolarSystem = () => {
   return (
     <div className="solar-page">
       {isLoading ? (
-        <h2>request is still in process, loading..</h2>
+        <LoadingSpinner />
       ) : (
         <>
           <div className="solar-container">
-            {solarSystemFiltered.map((planet, index) => {
-              return (
-                <PlanetsButton
-                  planetDetails={planet}
-                  key={index}
-                  setDetailPlanet={setDetailPlanet}
-                />
-              );
-            })}
+            <PlanetImage data={detailPlanet} />
+            <div className="planet-infos">
+              <div className="planet-btn-container">
+                {solarSystemFiltered.map((planet, index) => {
+                  return (
+                    <PlanetsButton
+                      planetDetails={planet}
+                      key={index}
+                      setDetailPlanet={setDetailPlanet}
+                    />
+                  );
+                })}
+              </div>
+              <PlanetCard data={detailPlanet} />
+            </div>
           </div>
-          <PlanetCard data={detailPlanet} />
+
           <div>
             {/* <h2>No planet</h2>
             <PlanetsButton data={moon[0]} />

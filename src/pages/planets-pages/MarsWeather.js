@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./MarsWeather.css";
 import CardWeather from "../../components/planets/mars-weather/CardWeather";
 import DetailWeatherCard from "../../components/planets/mars-weather/DetailWeatherCard";
+import LoadingSpinner from "../../components/news-card/loading-spinner/LoadingSpinner";
 
 const MarsWeather = () => {
   const [marsWeatherResp, errorResp, isLoading] = useFetch(
@@ -37,7 +38,7 @@ const MarsWeather = () => {
   return (
     <div className="focus-on-mars">
       {isLoading ? (
-        <h2>request is still in process, loading..</h2>
+        <LoadingSpinner />
       ) : (
         <>
           <h1>

@@ -35,7 +35,7 @@ function Footer() {
       )}
       <FooterButton
         onClick={() => setOpenModal(true)}
-        title={<i class="fa-brands fa-linkedin"></i>}
+        title={<i className="fa-brands fa-linkedin"></i>}
       />
       <a href="#" target="_blank">
         LINK 2

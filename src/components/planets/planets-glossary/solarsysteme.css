@@ -5,14 +5,23 @@
   background-size: cover;
   text-align: center;
   color: white;
-  padding-top: 100px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .solar-container {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.planet-infos {
+  padding: 100px;
 }
 
 .planet-card {
@@ -20,7 +29,7 @@
   text-align: left;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
@@ -31,12 +40,11 @@
   letter-spacing: 0.1rem;
 }
 
-.planet-card img {
+img {
   width: 400px;
-  margin-top: 200px;
 }
 
-.planet-card img.uranus {
+img.uranus {
   margin-top: 0;
 }
 
@@ -61,11 +69,16 @@
   }
 }
 
+.planet-btn-container {
+  width: 60%;
+  margin: auto;
+}
+
 .solar-buttons {
   cursor: pointer;
   background: none;
   border: none;
-  padding: 10px;
+  padding: 5px;
   margin-top: 10px;
   color: white;
   text-transform: uppercase;
@@ -81,7 +94,7 @@
 
 @media screen and (min-width: 960px) {
   .solar-page {
-    height: 1200px;
+    min-height: 100vh;
   }
 
   .planet-card {
