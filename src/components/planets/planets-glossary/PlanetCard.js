@@ -9,7 +9,7 @@ const PlanetCard = (props) => {
         <p>{isPlanet ? "is planet" : "is no planet"}</p>
         <p>Density: {density}</p>
         <p>Gravity: {gravity}</p>
-        <p>distanceFromEarth {distanceFromEarth}</p>
+        <p>Distance from Earth {distanceFromEarth}</p>
       </div>
     </div>
   );

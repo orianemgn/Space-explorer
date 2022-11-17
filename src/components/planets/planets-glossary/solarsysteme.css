@@ -22,6 +22,12 @@
   justify-content: space-evenly;
 }
 
+.planet-card h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+}
+
 img {
   width: 400px;
   padding: 10px;

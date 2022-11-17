@@ -12,6 +12,11 @@ function Navbar() {
     setClick(!click);
   };
 
+  const openInNewTab = (url) => {
+    // 👇️ setting target to _blank with window.open
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <nav id="navbar">
       <ul className={click ? "menu active" : "menu"}>
@@ -22,6 +27,17 @@ function Navbar() {
           <Link to="#" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </Link>
+        </li>
+        <li className="item button secondary">
+          <a
+            type="button"
+            href="https://github.com/orianemgn/Space-explorer"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={openInNewTab}
+          >
+            GitHub
+          </a>
         </li>
       </ul>
     </nav>
