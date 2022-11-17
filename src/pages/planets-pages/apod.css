@@ -6,12 +6,22 @@
 }
 
 .apod-card {
-  background: #19426ab7;
+  background: rgba(255, 255, 255, 0.728);
   width: 100%;
   margin: auto;
   padding: 40px;
-  color: white;
+  color: black;
   border-radius: 15px;
+  position: relative;
+  animation: apodcard 5s;
+}
+@keyframes apodcard {
+  from {
+    left: 300px;
+  }
+  to {
+    left: 0px;
+  }
 }
 
 .apod-card h1 {
@@ -19,6 +29,7 @@
   font-size: 3rem;
   text-transform: uppercase;
   padding-bottom: 15px;
+  color: white;
 }
 
 .apod-card h4 {
