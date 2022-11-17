@@ -51,6 +51,11 @@
   text-decoration: underline;
 }
 
+.planet-infos {
+  width: 50%;
+  margin: auto;
+}
+
 .planet-card h2 {
   font-family: "Anton", sans-serif;
   font-size: 4rem;
