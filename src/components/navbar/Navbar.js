@@ -1,6 +1,6 @@
 import React from "react";
 import { menuItems } from "../../menuItemsList";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import MenuItems from "./MenuItems";
 import "./Navbar.css";
@@ -10,11 +10,6 @@ function Navbar() {
 
   const handleClick = () => {
     setClick(!click);
-  };
-
-  const openInNewTab = (url) => {
-    // 👇️ setting target to _blank with window.open
-    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
