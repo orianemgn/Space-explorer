@@ -1,18 +1,36 @@
 import { planetsItemsList } from "./planetsItemsList";
 
 const PlanetsButton = (props) => {
-  const { setDetailPlanet } = props;
+  //console.log("Props button", props);
+
+  const { setDetailPlanet, detailPlanetState } = props;
   const { englishName, isPlanet, density, gravity } = props.planetDetails;
 
-  const image = planetsItemsList.find(
+  const detailPlanet = planetsItemsList.find(
     (planet) => planet.title === englishName
-  ).img;
+  );
+  console.log(props);
+  console.log("state:", detailPlanetState);
+
+  const image = detailPlanet.img;
+  const distanceFromEarth = detailPlanet.distanceFromEarth;
 
   return (
     <button
-      className="solar-buttons"
+      className={
+        detailPlanetState.englishName === englishName
+          ? "planets-buttons planet-active"
+          : "planets-buttons"
+      }
       onClick={() =>
-        setDetailPlanet({ englishName, isPlanet, density, gravity, image })
+        setDetailPlanet({
+          englishName,
+          isPlanet,
+          density,
+          gravity,
+          image,
+          distanceFromEarth,
+        })
       }
     >
       {englishName}

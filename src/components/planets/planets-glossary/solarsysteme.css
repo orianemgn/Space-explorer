@@ -1,18 +1,133 @@
+.galaxy-background {
+  /*width: 100vw;
+  height: 100vh;
+  background: black;
+  background-image: radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, white 2px, transparent 1px),
+    radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 150px 150px;
+  background-position: 10px 10px, 50px 125px, 125px 75px;*/
+  background-image: url("../../../assests/bg-planets-glossary.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.planets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.planets-btn-container {
+  width: 60%;
+  margin: auto;
+}
+
+.planets-buttons {
+  font-family: "Anton", sans-serif;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px;
+  border: none;
+}
+
+.planets-buttons:hover {
+  text-decoration: underline;
+}
+
+.planet-active {
+  text-decoration: underline;
+}
+
+.planet-card h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+}
+
+.planet-img {
+  width: 220px;
+  padding: 10px 10px 70px 10px;
+}
+
+.planet-img {
+  margin-bottom: 0;
+}
+
+.rotate {
+  animation: rotation 10s;
+}
+
+.linear {
+  animation-timing-function: linear;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .galaxy-background {
+    justify-content: space-evenly;
+  }
+  .planets-container {
+    flex-direction: row;
+  }
+  .planet-img {
+    width: 400px;
+    padding: 10px 10px 70px 10px;
+  }
+}
+
+/*
+
 .solar-page {
-  background-image: url("../../../assests/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
+  background-image: url("../../../assests/aditya-hafiz-syahputra-FD1inZ5mA-c-unsplash.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   text-align: center;
   color: white;
-  padding-top: 100px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 }
 
+
+
 .solar-container {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.planet-infos {
+  padding: 100px;
 }
 
 .planet-card {
@@ -20,7 +135,7 @@
   text-align: left;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
@@ -31,12 +146,11 @@
   letter-spacing: 0.1rem;
 }
 
-.planet-card img {
+img {
   width: 400px;
-  margin-top: 200px;
 }
 
-.planet-card img.uranus {
+img.uranus {
   margin-top: 0;
 }
 
@@ -61,17 +175,22 @@
   }
 }
 
-.solar-buttons {
+.planet-btn-container {
+  width: 60%;
+  margin: auto;
+}
+
+.planets-buttons {
   cursor: pointer;
   background: none;
   border: none;
-  padding: 10px;
+  padding: 5px;
   margin-top: 10px;
   color: white;
   text-transform: uppercase;
 }
 
-.solar-buttons:hover {
+.planets-buttons:hover {
   text-decoration: underline;
 }
 
@@ -81,7 +200,7 @@
 
 @media screen and (min-width: 960px) {
   .solar-page {
-    height: 1200px;
+    min-height: 100vh;
   }
 
   .planet-card {
@@ -89,3 +208,4 @@
     width: 60%;
   }
 }
+*/

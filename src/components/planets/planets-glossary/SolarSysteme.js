@@ -4,6 +4,9 @@ import PlanetCard from "./PlanetCard";
 import PlanetsButton from "./PlanetsButton";
 import "./solarsysteme.css";
 import { planetsItemsList } from "./planetsItemsList";
+import { PlanetImage } from "./PlanetImage";
+import LoadingSpinner from "../../news-card/loading-spinner/LoadingSpinner";
+import { motion } from "framer-motion";
 
 const SolarSystem = () => {
   const [apiResp, errorResp, isLoading] = useFetch(
@@ -39,27 +42,32 @@ const SolarSystem = () => {
   }
 
   return (
-    <div className="solar-page">
+    <div className="galaxy-background">
       {isLoading ? (
-        <h2>request is still in process, loading..</h2>
+        <LoadingSpinner />
       ) : (
         <>
-          <div className="solar-container">
-            {solarSystemFiltered.map((planet, index) => {
-              return (
-                <PlanetsButton
-                  planetDetails={planet}
-                  key={index}
-                  setDetailPlanet={setDetailPlanet}
-                />
-              );
-            })}
-          </div>
-          <PlanetCard data={detailPlanet} />
-          <div>
-            {/* <h2>No planet</h2>
-            <PlanetsButton data={moon[0]} />
-        <PlanetsButton data={sun[0]} /> */}
+          <div className="planets-container">
+            <PlanetImage data={detailPlanet} />
+            <motion.div
+              whileInView={{ y: [100, 20], opacity: [0, 1] }}
+              transition={{ duration: 0.8, ease: "easeIn" }}
+              className="planets-infos"
+            >
+              <div className="planets-btn-container">
+                {solarSystemFiltered.map((planet, index) => {
+                  return (
+                    <PlanetsButton
+                      planetDetails={planet}
+                      key={index}
+                      setDetailPlanet={setDetailPlanet}
+                      detailPlanetState={detailPlanet}
+                    />
+                  );
+                })}
+              </div>
+              <PlanetCard data={detailPlanet} />
+            </motion.div>
           </div>
         </>
       )}
@@ -68,6 +76,3 @@ const SolarSystem = () => {
 };
 
 export default SolarSystem;
-
-//   const moon = solarSystem.filter((element) => element.englishName === "Moon");
-//   const sun = solarSystem.filter((element) => element.englishName === "Sun");

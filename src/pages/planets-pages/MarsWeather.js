@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import "./MarsWeather.css";
 import CardWeather from "../../components/planets/mars-weather/CardWeather";
 import DetailWeatherCard from "../../components/planets/mars-weather/DetailWeatherCard";
+import LoadingSpinner from "../../components/news-card/loading-spinner/LoadingSpinner";
+import { motion } from "framer-motion";
 
 const MarsWeather = () => {
   const [marsWeatherResp, errorResp, isLoading] = useFetch(
@@ -37,9 +39,12 @@ const MarsWeather = () => {
   return (
     <div className="focus-on-mars">
       {isLoading ? (
-        <h2>request is still in process, loading..</h2>
+        <LoadingSpinner />
       ) : (
-        <>
+        <motion.div
+          whileInView={{ y: [100, 20], opacity: [0, 1] }}
+          transition={{ duration: 0.8, ease: "easeIn" }}
+        >
           <h1>
             Weather
             <span>on</span>
@@ -60,7 +65,7 @@ const MarsWeather = () => {
               })}
             </div>
           </div>
-        </>
+        </motion.div>
       )}
     </div>
   );
