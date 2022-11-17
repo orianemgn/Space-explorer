@@ -40,6 +40,19 @@ html {
     flex-direction: row;
     justify-content: center;
   }
+
+  .pharagraph1 {
+    vertical-align: text-top;
+    font-size: 1.6rem;
+    text-align: center;
+    color: rgb(77, 73, 119);
+    padding: 4rem;
+    border-radius: 1rem;
+    width: 30%;
+    position: relative;
+    right: 30%;
+
+  }
   
   .parallax-item:first-child {
     background-image: url(/src/assests/bg2.jpg);
@@ -66,22 +79,31 @@ html {
   
   @media screen and (max-width: 768px) {
     .parallax-item h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
     text-transform:inherit;
     color: whitesmoke;
-    letter-spacing: 1rem;
+    letter-spacing: 0.5rem;
     font-family: "Anton", sans-serif;
-    padding: 1rem;
-    margin-left: 90px;
+    padding: 2rem;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
     
     }
 
+    .pharagraph1 {
+      display: none;
+    }
 
     .react-player {
       width: 80%;
       height: 80%;
       left: 10%;
       position: absolute;
+      margin-top: 150px;
      }
      .react-player2 {
       width: 80%;
