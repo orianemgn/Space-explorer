@@ -33,8 +33,8 @@ function Navbar() {
             type="button"
             href="https://github.com/orianemgn/Space-explorer"
             target="_blank"
-            rel="noopener noreferrer"
-            onClick={openInNewTab}
+            rel="noreferrer"
+            alt="github"
           >
             GitHub
           </a>
