@@ -2,6 +2,7 @@ import "./app.css";
 import { FooterButton } from "../footer-button";
 import { useState } from "react";
 import LinksModal from "../contact modal/LinksModal";
+import { AnimatePresence } from "framer-motion";
 
 const gitHubLinks = [
   {
@@ -27,19 +28,25 @@ function Footer() {
         onClick={() => setOpenModal(true)}
         title={<i className="fa-brands fa-square-github"></i>}
       />
-      {openModal && (
-        <LinksModal
-          gitHubLinks={gitHubLinks}
-          onClick={() => setOpenModal(false)}
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}>
+        {openModal && (
+          <LinksModal
+            gitHubLinks={gitHubLinks}
+            onClick={() => setOpenModal(false)}
+          />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        <FooterButton
+          onClick={() => setOpenModal(true)}
+          title={<i className="fa-brands fa-linkedin"></i>}
         />
-      )}
-      <FooterButton
-        onClick={() => setOpenModal(true)}
-        title={<i className="fa-brands fa-linkedin"></i>}
-      />
-      <a href="#" target="_blank">
-        LINK 2
-      </a>
+
+      </AnimatePresence>
+
     </div>
   );
 }
