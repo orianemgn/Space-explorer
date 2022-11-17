@@ -15,31 +15,46 @@
 
 .crew-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .crew-cards {
-  width: 25%;
-  background-color: white;
-  margin: 40px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.728);
+  margin: 20px;
   padding: 20px 20px;
   border-radius: 15px;
+  position: relative;
+  animation: mymove 5s infinite;
+
+  display: flex;
+}
+
+@keyframes mymove {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 0px;
+  }
 }
 
 .crew-cards img {
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  margin-bottom: 40px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
 }
 
 .crew-cards i {
   font-size: 2rem;
-  padding: 40px 10px 20px;
+  padding: 20px 10px;
   color: black;
 }
 
 .crew-cards p {
   padding: 40px;
+  font-size: 0.9rem;
 }

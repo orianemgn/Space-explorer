@@ -6,6 +6,7 @@ import "./solarsysteme.css";
 import { planetsItemsList } from "./planetsItemsList";
 import { PlanetImage } from "./PlanetImage";
 import LoadingSpinner from "../../news-card/loading-spinner/LoadingSpinner";
+import { motion } from "framer-motion";
 
 const SolarSystem = () => {
   const [apiResp, errorResp, isLoading] = useFetch(
@@ -42,31 +43,34 @@ const SolarSystem = () => {
 
   return (
     <div className="galaxy-background">
-      <div className="planets-page">
-        {isLoading ? (
-          <LoadingSpinner />
-        ) : (
-          <>
-            <div className="planets-container">
-              <PlanetImage data={detailPlanet} />
-              <div className="planets-infos">
-                <div className="planets-btn-container">
-                  {solarSystemFiltered.map((planet, index) => {
-                    return (
-                      <PlanetsButton
-                        planetDetails={planet}
-                        key={index}
-                        setDetailPlanet={setDetailPlanet}
-                      />
-                    );
-                  })}
-                </div>
-                <PlanetCard data={detailPlanet} />
+      {isLoading ? (
+        <LoadingSpinner />
+      ) : (
+        <>
+          <div className="planets-container">
+            <PlanetImage data={detailPlanet} />
+            <motion.div
+              whileInView={{ y: [100, 20], opacity: [0, 1] }}
+              transition={{ duration: 0.8, ease: "easeIn" }}
+              className="planets-infos"
+            >
+              <div className="planets-btn-container">
+                {solarSystemFiltered.map((planet, index) => {
+                  return (
+                    <PlanetsButton
+                      planetDetails={planet}
+                      key={index}
+                      setDetailPlanet={setDetailPlanet}
+                      detailPlanetState={detailPlanet}
+                    />
+                  );
+                })}
               </div>
-            </div>
-          </>
-        )}
-      </div>
+              <PlanetCard data={detailPlanet} />
+            </motion.div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
