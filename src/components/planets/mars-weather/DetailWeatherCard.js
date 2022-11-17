@@ -23,6 +23,15 @@ const DetailWeatherCard = (props) => {
       </div>
       <div className="detail-card-body">
         <div>
+          <i className="fa-solid fa-cloud-moon"></i>
+          <p>
+            <b>Sunrise:</b> {sunrise}
+          </p>
+          <p>
+            <b>Sunset:</b> {sunset}
+          </p>
+        </div>
+        <div>
           <i
             className={
               atmo_opacity === "Sunny"
@@ -34,15 +43,6 @@ const DetailWeatherCard = (props) => {
             <b>Atmosphere: </b>
           </p>
           <p>{atmo_opacity}</p>
-        </div>
-        <div>
-          <i className="fa-solid fa-cloud-moon"></i>
-          <p>
-            <b>Sunrise:</b> {sunrise}
-          </p>
-          <p>
-            <b>Sunset:</b> {sunset}
-          </p>
         </div>
         <div>
           <i className="fa-solid fa-temperature-quarter"></i>

@@ -1,5 +1,5 @@
 import Dropdown from "./Dropdown";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const MenuItems = ({ items }) => {
@@ -7,6 +7,10 @@ const MenuItems = ({ items }) => {
 
   const handleClick = () => {
     setClick(!click);
+  };
+
+  const handleActiveLink = ({ isActive }) => {
+    return isActive ? { color: "#35858b", textDecoration: "none" } : null;
   };
 
   return (
@@ -28,7 +32,9 @@ const MenuItems = ({ items }) => {
           <Dropdown submenus={items.submenu} handleClick={handleClick} />
         </>
       ) : (
-        <Link to={items.url}>{items.title}</Link>
+        <NavLink to={items.url} style={handleActiveLink}>
+          {items.title}
+        </NavLink>
       )}
     </li>
   );

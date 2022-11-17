@@ -43,9 +43,10 @@ export const menuItems = [
     url: "/the-crew",
     className: "item",
   },
-  {
-    title: "GitHub",
-    url: "https://github.com/orianemgn/Space-explorer",
-    className: "item button secondary",
-  },
 ];
+
+//{
+//    title: "GitHub",
+//    url: "https://github.com/orianemgn/Space-explorer",
+//    className: "item button secondary",
+//  },

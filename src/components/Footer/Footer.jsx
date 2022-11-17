@@ -57,6 +57,7 @@ function Footer() {
         )}
       </AnimatePresence>
 
+
       <FooterButton
         // Linkedin Contacts
         onClick={() => setOpenModal(true)}
@@ -73,7 +74,16 @@ function Footer() {
             onClick={() => setOpenModal(false)}
           />
         )}
+
+      <AnimatePresence>
+        <FooterButton
+          onClick={() => setOpenModal(true)}
+          title={<i className="fa-brands fa-linkedin"></i>}
+        />
+
+
       </AnimatePresence>
+
     </div>
   );
 }

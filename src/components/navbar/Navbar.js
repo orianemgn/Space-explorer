@@ -1,6 +1,6 @@
 import React from "react";
 import { menuItems } from "../../menuItemsList";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import MenuItems from "./MenuItems";
 import "./Navbar.css";
@@ -22,6 +22,17 @@ function Navbar() {
           <Link to="#" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </Link>
+        </li>
+        <li className="item button secondary">
+          <a
+            type="button"
+            href="https://github.com/orianemgn/Space-explorer"
+            target="_blank"
+            rel="noreferrer"
+            alt="github"
+          >
+            GitHub
+          </a>
         </li>
       </ul>
     </nav>

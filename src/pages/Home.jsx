@@ -8,7 +8,7 @@ const Home = () => {
     <div className="main">
       <video src={videoBg} autoPlay loop muted />
       <motion.div 
-      whileInView={{ y: [100, 0], opacity: [0, 1] }}
+      whileInView={{ y: [100, 20], opacity: [0, 1] }}
       transition={{ duration: 0.8, ease: "easeIn" }}
       className="content">
         <h1>Welcome</h1>

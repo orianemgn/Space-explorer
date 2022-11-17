@@ -5,7 +5,7 @@ import MarsWeather from "./pages/planets-pages/MarsWeather";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Videos from "./pages/Videos";
-import TheCrew from "./pages/TheCrew";
+import Crew from "./pages/Crew";
 import Header from "./components/navbar/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
@@ -23,7 +23,7 @@ function App() {
           <Route path="/planets-glossary" element={<PlanetsGlossary />} />
           <Route path="/weather-on-mars" element={<MarsWeather />} />
           <Route path="/videos" element={<Videos />} />
-          <Route path="/the-crew" element={<TheCrew />} />
+          <Route path="/the-crew" element={<Crew />} />
         </Routes>
       </Router>
       <div>
