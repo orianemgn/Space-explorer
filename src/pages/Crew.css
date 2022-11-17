@@ -25,18 +25,18 @@
   margin: 20px;
   padding: 20px 20px;
   border-radius: 15px;
-  position: relative;
-  animation: mymove 5s;
+  /*position: relative;
+  animation: mymove 5s;*/
 }
 
-@keyframes mymove {
+/*@keyframes mymove {
   from {
     right: -300px;
   }
   to {
     left: 0px;
   }
-}
+}*/
 
 .crew-cards img {
   border-radius: 50%;
