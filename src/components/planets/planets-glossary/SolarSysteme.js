@@ -41,41 +41,34 @@ const SolarSystem = () => {
   }
 
   return (
-    <div className="solar-page">
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : (
-        <>
-          <div className="solar-container">
-            <PlanetImage data={detailPlanet} />
-            <div className="planet-infos">
-              <div className="planet-btn-container">
-                {solarSystemFiltered.map((planet, index) => {
-                  return (
-                    <PlanetsButton
-                      planetDetails={planet}
-                      key={index}
-                      setDetailPlanet={setDetailPlanet}
-                    />
-                  );
-                })}
+    <div className="galaxy-background">
+      <div className="planets-page">
+        {isLoading ? (
+          <LoadingSpinner />
+        ) : (
+          <>
+            <div className="planets-container">
+              <PlanetImage data={detailPlanet} />
+              <div className="planets-infos">
+                <div className="planets-btn-container">
+                  {solarSystemFiltered.map((planet, index) => {
+                    return (
+                      <PlanetsButton
+                        planetDetails={planet}
+                        key={index}
+                        setDetailPlanet={setDetailPlanet}
+                      />
+                    );
+                  })}
+                </div>
+                <PlanetCard data={detailPlanet} />
               </div>
-              <PlanetCard data={detailPlanet} />
             </div>
-          </div>
-
-          <div>
-            {/* <h2>No planet</h2>
-            <PlanetsButton data={moon[0]} />
-        <PlanetsButton data={sun[0]} /> */}
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </div>
     </div>
   );
 };
 
 export default SolarSystem;
-
-//   const moon = solarSystem.filter((element) => element.englishName === "Moon");
-//   const sun = solarSystem.filter((element) => element.englishName === "Sun");

@@ -13,7 +13,7 @@ const PlanetsButton = (props) => {
 
   return (
     <button
-      className="solar-buttons"
+      className="planets-buttons"
       onClick={() =>
         setDetailPlanet({
           englishName,

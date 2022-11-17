@@ -1,5 +1,70 @@
+.galaxy-background {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  background-image: radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, white 2px, transparent 1px),
+    radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 150px 150px;
+  background-position: 10px 10px, 50px 125px, 125px 75px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.planets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+img {
+  width: 400px;
+  padding: 10px;
+}
+
+img.uranus {
+  margin-top: 0;
+}
+
+.rotate {
+  animation: rotation 10s;
+}
+
+.linear {
+  animation-timing-function: linear;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .galaxy-background {
+    justify-content: space-evenly;
+  }
+  .planets-container {
+    flex-direction: row;
+  }
+}
+
+/*
+
 .solar-page {
-  background-image: url("../../../assests/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
+  background-image: url("../../../assests/aditya-hafiz-syahputra-FD1inZ5mA-c-unsplash.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -11,6 +76,8 @@
   justify-content: center;
   align-items: center;
 }
+
+
 
 .solar-container {
   margin-top: 50px;
@@ -74,7 +141,7 @@ img.uranus {
   margin: auto;
 }
 
-.solar-buttons {
+.planets-buttons {
   cursor: pointer;
   background: none;
   border: none;
@@ -84,7 +151,7 @@ img.uranus {
   text-transform: uppercase;
 }
 
-.solar-buttons:hover {
+.planets-buttons:hover {
   text-decoration: underline;
 }
 
@@ -102,3 +169,4 @@ img.uranus {
     width: 60%;
   }
 }
+*/
