@@ -1,6 +1,8 @@
 import { planetsItemsList } from "./planetsItemsList";
 
 const PlanetsButton = (props) => {
+  //console.log("Props button", props);
+
   const { setDetailPlanet } = props;
   const { englishName, isPlanet, density, gravity } = props.planetDetails;
 
