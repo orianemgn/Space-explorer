@@ -28,7 +28,17 @@ const MarsWeather = () => {
   }, [marsWeatherResp, isLoading]);
 
   useEffect(() => {
-    setDetailWeather(lastSevenDays[0]);
+    const date = new Date(lastSevenDays[0].terrestrial_date).toLocaleString(
+      "en-us",
+      {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }
+    );
+    const weather = { ...lastSevenDays[0], date };
+    setDetailWeather(weather);
   }, [lastSevenDays]);
 
   if (errorResp) {

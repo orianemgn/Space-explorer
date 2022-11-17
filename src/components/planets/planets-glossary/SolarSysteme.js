@@ -24,8 +24,6 @@ const SolarSystem = () => {
     }
   }, [apiResp, isLoading]);
 
-  console.log("solarSystemFiltered:", solarSystemFiltered);
-
   useEffect(() => {
     if (solarSystemFiltered.length) {
       const image = planetsItemsList.find(

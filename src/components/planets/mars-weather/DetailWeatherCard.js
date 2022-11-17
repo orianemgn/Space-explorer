@@ -9,6 +9,7 @@ const DetailWeatherCard = (props) => {
     sunrise,
     sunset,
     atmo_opacity,
+    date,
     design,
   } = props.data;
 
@@ -18,7 +19,7 @@ const DetailWeatherCard = (props) => {
         <h3>Latest report from the red planet</h3>
         <div>
           <h2>Sol: {sol}</h2>
-          <p>{terrestrial_date}</p>
+          <p>{date}</p>
         </div>
       </div>
       <div className="detail-card-body">
