@@ -4,7 +4,6 @@ export const CrewCard = (props) => {
   console.log(props);
   const { name, image, gitHubLink, linkedinLink, description } = props.crew;
 
-  console.log(name);
   return (
     <div className="crew-cards">
       <div>
