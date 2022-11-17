@@ -50,12 +50,12 @@
   letter-spacing: 0.1rem;
 }
 
-img {
+.planet-img {
   width: 220px;
   padding: 10px 10px 70px 10px;
 }
 
-img.uranus {
+.planet-img {
   margin-bottom: 0;
 }
 
@@ -87,7 +87,7 @@ img.uranus {
   .planets-container {
     flex-direction: row;
   }
-  img {
+  .planet-img {
     width: 400px;
     padding: 10px 10px 70px 10px;
   }

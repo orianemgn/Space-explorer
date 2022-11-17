@@ -6,8 +6,8 @@ export const PlanetImage = (props) => {
       <img
         className={
           englishName === "Uranus"
-            ? "rotate linear infinite uranus"
-            : "rotate linear infinite"
+            ? "planet-img rotate linear infinite uranus"
+            : "planet-img rotate linear infinite"
         }
         src={image}
         alt={englishName}
