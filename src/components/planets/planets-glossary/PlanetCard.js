@@ -12,7 +12,7 @@ const PlanetCard = (props) => {
     <div className="planet-card">
       <div>
         <h2>{englishName}</h2>
-        <p>{isPlanet ? "is planet" : "is no planet"}</p>
+        {/*<p>{isPlanet ? "is planet" : "is no planet"}</p>*/}
         <p>{description}</p>
         <p>Density: {density}</p>
         <p>Gravity: {gravity}</p>
