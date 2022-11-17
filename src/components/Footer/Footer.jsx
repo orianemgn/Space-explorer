@@ -39,44 +39,41 @@ function Footer() {
 
   return (
     <div className="footer">
-      <div>
-        <FooterButton
-          //Github Contacts
-          onClick={() => setOpenModal(true)}
-          title={<i className="fa-brands fa-square-github"></i>}
-        />
-        <AnimatePresence
-          //framer motion animation
-          initial={false}
-          exitBeforeEnter={true}
-          onExitComplete={() => null}>
-          {openModal && (
-            <LinksModal
-              linkArr={gitHubLinks}
-              onClick={() => setOpenModal(false)}
-            />
-          )}
-        </AnimatePresence>
-      </div>
-      <div>
-        <FooterButton
-          // Linkedin Contacts
-          onClick={() => setOpenModal(true)}
-          title={<i className="fa-brands fa-linkedin"></i>}
-        />
-        <AnimatePresence
-          //framer motion animation
-          initial={false}
-          exitBeforeEnter={true}
-          onExitComplete={() => null}>
-          {openModal && (
-            <LinksModal
-              linkArr={linkedinLinks}
-              onClick={() => setOpenModal(false)}
-            />
-          )}
-        </AnimatePresence>
-      </div>
+      <FooterButton
+        //Github Contacts
+        onClick={() => setOpenModal(true)}
+        title={<i className="fa-brands fa-square-github"></i>}
+      />
+      <AnimatePresence
+        //framer motion animation
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}>
+        {openModal && (
+          <LinksModal
+            linkArr={gitHubLinks}
+            onClick={() => setOpenModal(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      <FooterButton
+        // Linkedin Contacts
+        onClick={() => setOpenModal(true)}
+        title={<i className="fa-brands fa-linkedin"></i>}
+      />
+      <AnimatePresence
+        //framer motion animation
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}>
+        {openModal && (
+          <LinksModal
+            linkArr={linkedinLinks}
+            onClick={() => setOpenModal(false)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
