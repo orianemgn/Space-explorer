@@ -4,7 +4,7 @@
 
 ## The project
 
-Wander is a react application to.....
+Space Explorer is a react application to.....
 
 ## How can I see it?
 
