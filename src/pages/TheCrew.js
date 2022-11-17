@@ -1,7 +1,7 @@
 import React from "react";
 
 function TheCrew() {
-  return <div>AboutUs</div>;
+  return <div>Our Crew</div>;
 }
 
 export default TheCrew;

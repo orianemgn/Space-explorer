@@ -51,13 +51,12 @@
 }
 
 img {
-  width: 400px;
-  padding: 10px;
+  width: 220px;
+  padding: 10px 10px 70px 10px;
 }
 
 img.uranus {
-  margin-top: 0;
-  width: 220px;
+  margin-bottom: 0;
 }
 
 .rotate {
@@ -87,6 +86,10 @@ img.uranus {
   }
   .planets-container {
     flex-direction: row;
+  }
+  img {
+    width: 400px;
+    padding: 10px 10px 70px 10px;
   }
 }
 
