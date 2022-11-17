@@ -3,7 +3,7 @@ import NewsCard from "../components/news-card/NewsCard";
 import "./News.css";
 import { motion } from "framer-motion";
 import { useFetch } from "../hooks/useFetch/useFetch";
-import LoadingSpinner from "../components/news-card/loading-spinner/LoadingSpinner";
+import LoadingSpinner from "../components/loading-spinner/LoadingSpinner";
 
 function News() {
   const newsFetch = "https://news-space.p.rapidapi.com/";
