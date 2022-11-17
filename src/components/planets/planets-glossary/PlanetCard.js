@@ -1,22 +1,15 @@
 const PlanetCard = (props) => {
-  const { englishName, isPlanet, density, gravity, image } = props.data;
+  const { englishName, isPlanet, density, gravity, distanceFromEarth } =
+    props.data;
 
   return (
     <div className="planet-card">
-      <img
-        className={
-          englishName === "Uranus"
-            ? "rotate linear infinite uranus"
-            : "rotate linear infinite"
-        }
-        src={image}
-        alt={englishName}
-      />
       <div>
         <h2>{englishName}</h2>
         <p>{isPlanet ? "is planet" : "is no planet"}</p>
-        <p> Density: {density}</p>
-        <p> Gravity: {gravity}</p>
+        <p>Density: {density}</p>
+        <p>Gravity: {gravity}</p>
+        <p>Distance from Earth {distanceFromEarth}</p>
       </div>
     </div>
   );

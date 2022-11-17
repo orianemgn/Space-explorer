@@ -15,6 +15,10 @@ const CardWeather = (props) => {
     atmo_opacity,
   } = props.data;
 
+  let reverseDate = terrestrial_date.split("-").reverse().join("/");
+  let date = new Date(reverseDate);
+  console.log("Date:", date);
+
   return (
     <div
       className="weather-cards"
@@ -27,6 +31,7 @@ const CardWeather = (props) => {
           sunrise,
           sunset,
           atmo_opacity,
+          date,
         })
       }
     >
