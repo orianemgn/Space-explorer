@@ -46,6 +46,7 @@ html {
     font-size: 1.6rem;
     text-align: center;
     color: rgb(77, 73, 119);
+    background-color: #acd9eb;
     padding: 4rem;
     border-radius: 1rem;
     width: 30%;
@@ -53,6 +54,20 @@ html {
     right: 30%;
 
   }
+  .pharagraph2 {
+    vertical-align: text-top;
+    font-size: 1.6rem;
+    text-align: center;
+    color: rgb(204, 201, 242);
+    background-color: rgb(116, 96, 72);
+    padding: 4rem;
+    border-radius: 1rem;
+    width: 30%;
+    position: relative;
+    right: 30%;
+  }
+
+  
   
   .parallax-item:first-child {
     background-image: url(/src/assests/bg2.jpg);
@@ -73,7 +88,8 @@ html {
   }
   
   .parallax-item:nth-child(4) {
-    background: darkcyan;
+    background: #181818;
+
     min-height: 600px;
   }
   
@@ -97,6 +113,9 @@ html {
     .pharagraph1 {
       display: none;
     }
+    .pharagraph2 {
+      display: none;
+    }
 
     .react-player {
       width: 80%;
@@ -105,7 +124,7 @@ html {
       position: absolute;
       margin-top: 150px;
      }
-     .react-player2 {
+     .react-player2 { 
       width: 80%;
       height: 80%;
       left: 10%;

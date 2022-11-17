@@ -77,6 +77,16 @@ When back in daylight the live stream of earth will recommence</p>
               />
               <h2>The awesomeness of space</h2>
             </motion.div>
+            <motion.div
+              whileInView={{ y: [-500, 0], opacity: [0, 1] }}
+              transition={{ duration: 1.2, ease: "easeIn" }}
+              className="pharagraph2">
+              <p>THIS WILL SHOW LIVE and  PRE-RECORDED FOOTAGE - depending on signal from the station or if the ISS is on the night side of Earth.
+
+When the feed is live the words LIVE NOW will appear in the top left hand corner of the screen.
+As the Space Station passes into a period of night every 45 mins video is unavailable - during this time, and other breaks in transmission,  recorded footage is shown .
+When back in daylight the live stream of earth will recommence</p>
+              </motion.div>
           </div>
         </section>
       </>
