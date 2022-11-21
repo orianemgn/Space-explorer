@@ -19,34 +19,61 @@ const gitHubLinks = [
   },
 ];
 
+const linkedinLinks = [
+  {
+    userName: "Oriane",
+    link: "https://www.linkedin.com/in/magninoriane/",
+  },
+  {
+    userName: "StefanIv",
+    link: "https://www.linkedin.com/in/stefan-ivanus/",
+  },
+  {
+    userName: "StefanDs",
+    link: "https://www.linkedin.com/in/stefan-dascalescu/",
+  },
+];
+
 function Footer() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="footer">
       <FooterButton
+        //Github Contacts
         onClick={() => setOpenModal(true)}
         title={<i className="fa-brands fa-square-github"></i>}
       />
       <AnimatePresence
+        //framer motion animation
         initial={false}
         exitBeforeEnter={true}
         onExitComplete={() => null}>
         {openModal && (
           <LinksModal
-            gitHubLinks={gitHubLinks}
+            linkArr={gitHubLinks}
             onClick={() => setOpenModal(false)}
           />
         )}
       </AnimatePresence>
-      <AnimatePresence>
-        <FooterButton
-          onClick={() => setOpenModal(true)}
-          title={<i className="fa-brands fa-linkedin"></i>}
-        />
 
+      <FooterButton
+        // Linkedin Contacts
+        onClick={() => setOpenModal(true)}
+        title={<i className="fa-brands fa-linkedin"></i>}
+      />
+      <AnimatePresence
+        //framer motion animation
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}>
+        {openModal && (
+          <LinksModal
+            linkArr={linkedinLinks}
+            onClick={() => setOpenModal(false)}
+          />
+        )}
       </AnimatePresence>
-
     </div>
   );
 }

@@ -14,8 +14,8 @@ import { motion } from "framer-motion";
 // });
 
 export default function VideoPage() {
-  const paralax2 = useRef()
-  
+  const paralax2 = useRef();
+
   // const parallax = document.getElementById("parallax");
   useEffect(() => {
     function handleParallax() {
@@ -38,29 +38,34 @@ export default function VideoPage() {
           </div>
           <div id="parallax" className="parallax-item">
             <motion.div
-            whileInView={{ y: [200, 0], opacity: [0, 1] }}
-            transition={{ duration: 1, ease: "easeIn" }}
-            className="react-player">
+              whileInView={{ y: [100, 0], opacity: [0, 1] }}
+              transition={{ duration: 1, ease: "easeIn" }}
+              className="react-player">
               <ReactPlayer
                 width={""}
                 controls
                 url="https://www.youtube.com/watch?v=86YLFOog4GM"
               />
               <h2>Nasa LiveStream</h2>
-              </motion.div>
-              <motion.div
+            </motion.div>
+            <motion.div
               whileInView={{ x: [-800, 50], opacity: [0, 1] }}
               transition={{ duration: 1.2, ease: "easeIn" }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               viewport={{ once: true }}
               className="pharagraph1">
-              <p>THIS WILL SHOW LIVE and  PRE-RECORDED FOOTAGE - depending on signal from the station or if the ISS is on the night side of Earth.
-
-When the feed is live the words LIVE NOW will appear in the top left hand corner of the screen.
-As the Space Station passes into a period of night every 45 mins video is unavailable - during this time, and other breaks in transmission,  recorded footage is shown .
-When back in daylight the live stream of earth will recommence</p>
-              </motion.div>
+              <p>
+                THIS WILL SHOW LIVE and PRE-RECORDED FOOTAGE - depending on
+                signal from the station or if the ISS is on the night side of
+                Earth. When the feed is live the words LIVE NOW will appear in
+                the top left hand corner of the screen. As the Space Station
+                passes into a period of night every 45 mins video is unavailable
+                - during this time, and other breaks in transmission, recorded
+                footage is shown . When back in daylight the live stream of
+                earth will recommence
+              </p>
+            </motion.div>
           </div>
           <div className="parallax-item">
             <h2>Div 3</h2>
@@ -68,8 +73,9 @@ When back in daylight the live stream of earth will recommence</p>
           </div>
           <div className="parallax-item">
             <motion.div
-            whileInView={{ x: [50, 800], opacity: [0, 1] }}
-            transition={{ duration: 1.2, ease: "easeIn" }} className="react-player2">
+              whileInView={{ x: [50, 800], opacity: [0, 1] }}
+              transition={{ duration: 1.2, ease: "easeIn" }}
+              className="react-player2">
               <ReactPlayer
                 width={""}
                 controls
@@ -81,12 +87,17 @@ When back in daylight the live stream of earth will recommence</p>
               whileInView={{ y: [-500, 0], opacity: [0, 1] }}
               transition={{ duration: 1.2, ease: "easeIn" }}
               className="pharagraph2">
-              <p>THIS WILL SHOW LIVE and  PRE-RECORDED FOOTAGE - depending on signal from the station or if the ISS is on the night side of Earth.
-
-When the feed is live the words LIVE NOW will appear in the top left hand corner of the screen.
-As the Space Station passes into a period of night every 45 mins video is unavailable - during this time, and other breaks in transmission,  recorded footage is shown .
-When back in daylight the live stream of earth will recommence</p>
-              </motion.div>
+              <p>
+                THIS WILL SHOW LIVE and PRE-RECORDED FOOTAGE - depending on
+                signal from the station or if the ISS is on the night side of
+                Earth. When the feed is live the words LIVE NOW will appear in
+                the top left hand corner of the screen. As the Space Station
+                passes into a period of night every 45 mins video is unavailable
+                - during this time, and other breaks in transmission, recorded
+                footage is shown . When back in daylight the live stream of
+                earth will recommence
+              </p>
+            </motion.div>
           </div>
         </section>
       </>

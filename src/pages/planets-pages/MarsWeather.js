@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./MarsWeather.css";
 import CardWeather from "../../components/planets/mars-weather/CardWeather";
 import DetailWeatherCard from "../../components/planets/mars-weather/DetailWeatherCard";
-import LoadingSpinner from "../../components/news-card/loading-spinner/LoadingSpinner";
+import LoadingSpinner from "../../components/loading-spinner/LoadingSpinner";
 import { motion } from "framer-motion";
 
 const MarsWeather = () => {
