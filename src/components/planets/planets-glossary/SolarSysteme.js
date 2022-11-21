@@ -5,7 +5,7 @@ import PlanetsButton from "./PlanetsButton";
 import "./solarsysteme.css";
 import { planetsItemsList } from "./planetsItemsList";
 import { PlanetImage } from "./PlanetImage";
-import LoadingSpinner from "../../news-card/loading-spinner/LoadingSpinner";
+import LoadingSpinner from "../../../components/loading-spinner/LoadingSpinner";
 import { motion } from "framer-motion";
 
 const SolarSystem = () => {
@@ -52,8 +52,7 @@ const SolarSystem = () => {
             <motion.div
               whileInView={{ y: [100, 20], opacity: [0, 1] }}
               transition={{ duration: 0.8, ease: "easeIn" }}
-              className="planets-infos"
-            >
+              className="planets-infos">
               <div className="planets-btn-container">
                 {solarSystemFiltered.map((planet, index) => {
                   return (
