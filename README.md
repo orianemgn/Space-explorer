@@ -1,6 +1,6 @@
 ## :rocket: :artificial_satellite: :earth_africa: SPACE EXPLORER
 
-### Build with React, CSS & API
+### Build with React, API and CSS
 
 ## The project
 
@@ -17,23 +17,28 @@ Space Explorer is a react application to.....
 
 ## Task distribution
 
-[@Stef14-bit]
+[@Stef14-bit](https://github.com/Stef14-bit)
 
 - News with creation of a API
 - Footer
 - Modal and links on the footer
 
-[@StefanDsd]
+[@StefanDsd](https://github.com/StefanDsd)
 
 - Home page
 - Video page
 
-[@orianemgn]
+[@orianemgn](https://github.com/orianemgn/)
 
-- Navbar
+- Responsive navbar
 - Planets pages with NASA API, Weather API and Solar-system API
+  - Image of the Day with [NASA APOD API](https://api.nasa.gov/)
+  - Planets Glossary with [The Solar System API](https://api.le-systeme-solaire.net/en/)
+  - Weather on Mars with [NASA API](`https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json)
 - Crew page
 
 ## Credits
 
 :raised_hands: Built and designed by [@Stef14-bit](https://github.com/Stef14-bit), [@StefanDsd](https://github.com/StefanDsd) & [@orianemgn](https://github.com/orianemgn/)
+
+Images from [Unsplash](https://unsplash.com/), Icons from [fontawesome](https://fontawesome.com/)
