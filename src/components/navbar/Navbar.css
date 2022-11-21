@@ -1,23 +1,4 @@
 /* Basic styling */
-
-/*:root {
-  --primary-color: black;
-  --secondary-color: #444;
-  --primary-text: white;
-  --primary-text-hover: blue;
-  --button-color-hover: white;
-}*/
-
-/*
-:root {
-  --primary-color: #27296d;
-  --secondary-color: #a393eb;
-  --primary-text: white;
-  --primary-text-hover: #5e63b6;
-  --button-color-hover: white;
-}
-*/
-
 :root {
   --primary-color: #181818;
   --secondary-color: #4fbdba;
@@ -25,8 +6,6 @@
   --primary-text-hover: #35858b;
   --button-color-hover: white;
 }
-
-/*background: rgb(209, 155, 155)*/
 
 nav {
   background-color: var(--primary-color);
@@ -61,6 +40,7 @@ a {
 .item:not(.button) a:hover,
 item a:hover::after {
   color: var(--primary-text-hover);
+  font-weight: bold;
 }
 
 /*Mobile Menu*/
