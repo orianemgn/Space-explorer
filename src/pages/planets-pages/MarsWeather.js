@@ -57,24 +57,26 @@ const MarsWeather = () => {
           whileInView={{ y: [100, 20], opacity: [0, 1] }}
           transition={{ duration: 0.8, ease: "easeIn" }}
         >
-          <h1>
-            Weather
-            <span>on</span>
-            Mars
-          </h1>
-          {detailWeather && <DetailWeatherCard data={detailWeather} />}
-          <div className="previous">
-            <h3>Previous 7 days</h3>
-            <div className="weather-cards-container">
-              {lastSevenDays.map((element, index) => {
-                return (
-                  <CardWeather
-                    data={element}
-                    key={index}
-                    setDetailWeather={setDetailWeather}
-                  />
-                );
-              })}
+          <div>
+            <h1>
+              Weather
+              <span>on</span>
+              Mars
+            </h1>
+            {detailWeather && <DetailWeatherCard data={detailWeather} />}
+            <div className="previous">
+              <h3>Previous 7 days</h3>
+              <div className="weather-cards-container">
+                {lastSevenDays.map((element, index) => {
+                  return (
+                    <CardWeather
+                      data={element}
+                      key={index}
+                      setDetailWeather={setDetailWeather}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
         </motion.div>

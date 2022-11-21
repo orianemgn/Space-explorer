@@ -1,20 +1,11 @@
 import "../../../pages/planets-pages/MarsWeather.css";
 
 const DetailWeatherCard = (props) => {
-  const {
-    sol,
-    terrestrial_date,
-    max_temp,
-    min_temp,
-    sunrise,
-    sunset,
-    atmo_opacity,
-    date,
-    design,
-  } = props.data;
+  const { sol, max_temp, min_temp, sunrise, sunset, atmo_opacity, date } =
+    props.data;
 
   return (
-    <div className={`detail-card ${design}`}>
+    <div className="detail-card">
       <div className="detail-card-header">
         <h3>Latest report from the red planet</h3>
         <div>
