@@ -14,6 +14,8 @@
 .focus-on-mars h1 {
   color: white;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .focus-on-mars h1 span {
@@ -25,7 +27,7 @@
 .detail-card {
   background: rgba(255, 255, 255, 0.728);
   padding: 20px;
-  margin: 0 auto;
+  margin: 0 20px;
   border-radius: 5px;
   display: block;
   margin-bottom: 50px;
@@ -52,16 +54,13 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 30px;
+  padding: 30px 0;
+  font-size: 0.7rem;
 }
 
 .detail-card-body i {
   font-size: 3rem;
   padding-bottom: 10px;
-}
-
-.previous {
-  margin-inline: 100px;
 }
 
 .previous h3 {
@@ -116,6 +115,12 @@
     height: 1200px;
   }
 
+  .focus-on-mars h1 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   .detail-card-header {
     display: flex;
     justify-content: space-evenly;
@@ -129,8 +134,16 @@
     padding-left: 70px;
   }
 
+  .detail-card-body {
+    font-size: 1rem;
+  }
+
   .detail-card-header h3 {
     text-align: left;
     padding-right: 50px;
+  }
+
+  .previous {
+    margin-inline: 100px;
   }
 }

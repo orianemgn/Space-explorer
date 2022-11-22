@@ -1,102 +1,102 @@
-
 html {
-    scroll-behavior: smooth;
-  }
-  
-  .parallax-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-family: Montserrat, sans-serif;
-    width: 100%;
-    min-height: 100vh;
-  }
-  .react-player {
-   width: 50%;
-   height: 60%;
-   left: 45%;
-   position: absolute;
-  }
-  
-  .react-player2 {
-    width: 50%;
-    height: 60%;
-    left: 5%;
-    margin-top: 50px;
-    position: absolute;
+  scroll-behavior: smooth;
+}
 
+.parallax-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+.react-player {
+  width: 50%;
+  height: 60%;
+  left: 45%;
+  position: absolute;
+}
 
-   }
+.react-player2 {
+  width: 50%;
+  height: 60%;
+  left: 5%;
+  margin-top: 50px;
+  position: absolute;
+}
+.parallax-item h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: whitesmoke;
+  letter-spacing: 1rem;
+  font-family: "Anton", sans-serif;
+  padding: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pharagraph1 {
+  vertical-align: text-top;
+  font-size: 1.6rem;
+  text-align: center;
+  color: rgb(77, 73, 119);
+  background-color: #acd9eb;
+  padding: 4rem;
+  border-radius: 1rem;
+  width: 30%;
+  position: relative;
+  right: 30%;
+}
+.pharagraph2 {
+  vertical-align: text-top;
+  font-size: 1.6rem;
+  text-align: center;
+  color: rgb(204, 201, 242);
+  background-color: rgb(116, 96, 72);
+  padding: 4rem;
+  border-radius: 1rem;
+  width: 30%;
+  position: relative;
+  right: 30%;
+}
+
+.parallax-item:first-child {
+  background-image: url(/src/assests/bg2.jpg);
+  background-size: cover;
+}
+.parallax-item:nth-child(2) {
+  background-image: radial-gradient(
+    circle,
+    #b4ccee,
+    #acd9eb,
+    #b7e3e1,
+    #cfe9d9,
+    #e8eeda
+  );
+  min-height: 700px;
+}
+
+.parallax-item:nth-child(3) {
+  background-image: url(/src/assests/bg3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax Effect for DIV 3 */
+  min-height: 800px;
+}
+
+.parallax-item:nth-child(4) {
+  background: #181818;
+
+  min-height: 600px;
+}
+
+@media screen and (max-width: 768px) {
   .parallax-item h2 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: whitesmoke;
-    letter-spacing: 1.3rem;
-    font-family: "Anton", sans-serif;
-    padding: 4rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .pharagraph1 {
-    vertical-align: text-top;
-    font-size: 1.6rem;
-    text-align: center;
-    color: rgb(77, 73, 119);
-    background-color: #acd9eb;
-    padding: 4rem;
-    border-radius: 1rem;
-    width: 30%;
-    position: relative;
-    right: 30%;
-
-  }
-  .pharagraph2 {
-    vertical-align: text-top;
-    font-size: 1.6rem;
-    text-align: center;
-    color: rgb(204, 201, 242);
-    background-color: rgb(116, 96, 72);
-    padding: 4rem;
-    border-radius: 1rem;
-    width: 30%;
-    position: relative;
-    right: 30%;
-  }
-
-  
-  
-  .parallax-item:first-child {
-    background-image: url(/src/assests/bg2.jpg);
-    background-size: cover;
-    
-  }
-  .parallax-item:nth-child(2) {
-    background-image: radial-gradient(circle, #b4ccee, #acd9eb, #b7e3e1, #cfe9d9, #e8eeda);
-    min-height: 700px;
-  }
-  
-  .parallax-item:nth-child(3) {
-    background-image: url(/src/assests/bg3.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Parallax Effect for DIV 3 */
-    min-height: 800px;
-  }
-  
-  .parallax-item:nth-child(4) {
-    background: #312d2d;
-
-    min-height: 600px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .parallax-item h2 {
-      font-size: 2rem;
-    text-transform:inherit;
+    font-size: 2rem;
+    text-transform: inherit;
     color: whitesmoke;
     letter-spacing: 0.5rem;
     font-family: "Anton", sans-serif;
@@ -105,32 +105,27 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
-    
-    }
-
-    .pharagraph1 {
-      display: none;
-    }
-    .pharagraph2 {
-      display: none;
-    }
-
-    .react-player {
-      width: 80%;
-      height: 80%;
-      left: 10%;
-      position: absolute;
-      margin-top: 150px;
-     }
-     .react-player2 { 
-      width: 80%;
-      height: 80%;
-      left: 10%;
-      margin-top: 100px;
-      position: fixed;
-     }
-     
   }
-  
+
+  .pharagraph1 {
+    display: none;
+  }
+  .pharagraph2 {
+    display: none;
+  }
+
+  .react-player {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    position: absolute;
+    margin-top: 150px;
+  }
+  .react-player2 {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    margin-top: 100px;
+    position: absolute;
+  }
+}

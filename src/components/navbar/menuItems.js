@@ -1,8 +1,10 @@
 import Dropdown from "./Dropdown";
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import useOnClickOutside from "../../hooks/useOnClickOutside/useOnClickOutside";
 
 const MenuItems = ({ items }) => {
+  const ref = useRef();
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
@@ -13,8 +15,11 @@ const MenuItems = ({ items }) => {
     return isActive ? { color: "#35858b", textDecoration: "none" } : null;
   };
 
+  useOnClickOutside(ref, () => setClick(false));
+
   return (
     <li
+      ref={ref}
       className={
         click ? `${items.className} submenu-active` : `${items.className}`
       }

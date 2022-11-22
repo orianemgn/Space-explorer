@@ -1,19 +1,23 @@
 import React from "react";
 import { menuItems } from "../../menuItemsList";
-import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useState, useRef } from "react";
 import MenuItems from "./MenuItems";
 import "./Navbar.css";
+import useOnClickOutside from "../../hooks/useOnClickOutside/useOnClickOutside";
 
 function Navbar() {
+  const ref = useRef();
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
     setClick(!click);
   };
 
+  useOnClickOutside(ref, () => setClick(false));
+
   return (
-    <nav id="navbar">
+    <nav ref={ref} id="navbar">
       <ul className={click ? "menu active" : "menu"}>
         {menuItems.map((menu, index) => {
           return <MenuItems items={menu} key={index} />;

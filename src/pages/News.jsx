@@ -3,7 +3,7 @@ import NewsCard from "../components/news-card/NewsCard";
 import "./News.css";
 import { motion } from "framer-motion";
 import { useFetch } from "../hooks/useFetch/useFetch";
-import LoadingSpinner from "../components/news-card/loading-spinner/LoadingSpinner";
+import LoadingSpinner from "../components/loading-spinner/LoadingSpinner";
 
 function News() {
   const newsFetch = "https://news-space.p.rapidapi.com/";
@@ -22,20 +22,25 @@ function News() {
   return (
     <div className="news">
       <h1>NEWS</h1>
-      {newsResp.data
-        .filter(
-          (item, index) =>
-            index === newsResp.data.findIndex((other) => item.url === other.url)
-        )
-        .slice(1, visible)
-        .map((item, index) => (
-          <NewsCard
-            key={index}
-            title={item.title}
-            source={item.source}
-            url={item.url}
-          />
-        ))}
+
+      {
+        //filtering duplicates from API response
+        newsResp.data
+          .filter(
+            (item, index) =>
+              index ===
+              newsResp.data.findIndex((other) => item.url === other.url)
+          )
+          .slice(1, visible)
+          .map((item, index) => (
+            <NewsCard
+              key={index}
+              title={item.title}
+              source={item.source}
+              url={item.url}
+            />
+          ))
+      }
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}

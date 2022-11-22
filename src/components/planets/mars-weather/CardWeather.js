@@ -2,8 +2,6 @@ import "../../../pages/planets-pages/MarsWeather.css";
 
 const CardWeather = (props) => {
   const { setDetailWeather } = props;
-  // console.log(setDetailWeather)
-  //pass as prop the seter of the state
 
   const {
     sol,
@@ -15,9 +13,12 @@ const CardWeather = (props) => {
     atmo_opacity,
   } = props.data;
 
-  let reverseDate = terrestrial_date.split("-").reverse().join("/");
-  let date = new Date(reverseDate);
-  console.log("Date:", date);
+  const date = new Date(terrestrial_date).toLocaleString("en-us", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
     <div

@@ -25,7 +25,7 @@ const dropIn = {
 };
 //
 
-function LinksModal({ onClick, gitHubLinks }) {
+function LinksModal({ onClick, linkArr }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -42,16 +42,16 @@ function LinksModal({ onClick, gitHubLinks }) {
         <p className="closeBtn" onClick={onClick}>
           close
         </p>
-        {gitHubLinks.map((ele) => {
+        {linkArr.map((e) => {
           return (
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              href={ele.link}
+              href={e.link}
               target="_blank"
               rel="noreferrer"
-              alt={ele.userName}>
-              {ele.userName}
+              alt={e.userName}>
+              {e.userName}
             </motion.a>
           );
         })}

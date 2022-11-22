@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./MarsWeather.css";
 import CardWeather from "../../components/planets/mars-weather/CardWeather";
 import DetailWeatherCard from "../../components/planets/mars-weather/DetailWeatherCard";
-import LoadingSpinner from "../../components/news-card/loading-spinner/LoadingSpinner";
+import LoadingSpinner from "../../components/loading-spinner/LoadingSpinner";
 import { motion } from "framer-motion";
 
 const MarsWeather = () => {
@@ -28,7 +28,19 @@ const MarsWeather = () => {
   }, [marsWeatherResp, isLoading]);
 
   useEffect(() => {
-    setDetailWeather(lastSevenDays[0]);
+    if (lastSevenDays.length) {
+      const date = new Date(lastSevenDays[0].terrestrial_date).toLocaleString(
+        "en-us",
+        {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }
+      );
+      const weather = { ...lastSevenDays[0], date };
+      setDetailWeather(weather);
+    }
   }, [lastSevenDays]);
 
   if (errorResp) {
@@ -45,24 +57,26 @@ const MarsWeather = () => {
           whileInView={{ y: [100, 20], opacity: [0, 1] }}
           transition={{ duration: 0.8, ease: "easeIn" }}
         >
-          <h1>
-            Weather
-            <span>on</span>
-            Mars
-          </h1>
-          {detailWeather && <DetailWeatherCard data={detailWeather} />}
-          <div className="previous">
-            <h3>Previous 7 days</h3>
-            <div className="weather-cards-container">
-              {lastSevenDays.map((element, index) => {
-                return (
-                  <CardWeather
-                    data={element}
-                    key={index}
-                    setDetailWeather={setDetailWeather}
-                  />
-                );
-              })}
+          <div>
+            <h1>
+              Weather
+              <span>on</span>
+              Mars
+            </h1>
+            {detailWeather && <DetailWeatherCard data={detailWeather} />}
+            <div className="previous">
+              <h3>Previous 7 days</h3>
+              <div className="weather-cards-container">
+                {lastSevenDays.map((element, index) => {
+                  return (
+                    <CardWeather
+                      data={element}
+                      key={index}
+                      setDetailWeather={setDetailWeather}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
         </motion.div>
