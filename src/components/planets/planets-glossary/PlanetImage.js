@@ -1,6 +1,6 @@
 export const PlanetImage = (props) => {
   const { image, englishName } = props.data;
-  console.log(image);
+
   return (
     <div>
       <img
