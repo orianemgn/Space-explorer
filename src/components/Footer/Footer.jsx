@@ -35,13 +35,14 @@ const linkedinLinks = [
 ];
 
 function Footer() {
-  const [openModal, setOpenModal] = useState(false);
+  const [openModalGit, setOpenModalGit] = useState(false);
+  const [openModalLinked, setOpenModalLinked] = useState(false);
 
   return (
     <div className="footer">
       <FooterButton
         //Github Contacts
-        onClick={() => setOpenModal(true)}
+        onClick={() => setOpenModalGit(true)}
         title={<i className="fa-brands fa-square-github"></i>}
       />
       <AnimatePresence
@@ -49,17 +50,17 @@ function Footer() {
         initial={false}
         exitBeforeEnter={true}
         onExitComplete={() => null}>
-        {openModal && (
+        {openModalGit && (
           <LinksModal
             linkArr={gitHubLinks}
-            onClick={() => setOpenModal(false)}
+            onClick={() => setOpenModalGit(false)}
           />
         )}
       </AnimatePresence>
 
       <FooterButton
         // Linkedin Contacts
-        onClick={() => setOpenModal(true)}
+        onClick={() => setOpenModalLinked(true)}
         title={<i className="fa-brands fa-linkedin"></i>}
       />
       <AnimatePresence
@@ -67,10 +68,10 @@ function Footer() {
         initial={false}
         exitBeforeEnter={true}
         onExitComplete={() => null}>
-        {openModal && (
+        {openModalLinked && (
           <LinksModal
             linkArr={linkedinLinks}
-            onClick={() => setOpenModal(false)}
+            onClick={() => setOpenModalLinked(false)}
           />
         )}
       </AnimatePresence>
