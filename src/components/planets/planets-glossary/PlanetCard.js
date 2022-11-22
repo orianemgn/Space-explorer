@@ -1,12 +1,6 @@
 const PlanetCard = (props) => {
-  const {
-    englishName,
-    isPlanet,
-    density,
-    gravity,
-    distanceFromEarth,
-    description,
-  } = props.data;
+  const { englishName, density, gravity, distanceFromEarth, description } =
+    props.data;
 
   return (
     <div className="planet-card">
