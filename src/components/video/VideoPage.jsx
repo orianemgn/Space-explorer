@@ -35,6 +35,7 @@ export default function VideoPage() {
               <ReactPlayer
                 width={""}
                 controls
+                sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation allow-presentation"
                 url="https://www.youtube.com/watch?v=86YLFOog4GM"
               />
               <h2>Nasa LiveStream</h2>
@@ -74,6 +75,7 @@ export default function VideoPage() {
               <ReactPlayer
                 width={""}
                 controls
+                sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation allow-presentation"
                 url="https://https://www.youtube.com/watch?v=gosjiD288Jk&t=1252s"
               />
               <h2>The awesomeness of space</h2>
