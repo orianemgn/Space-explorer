@@ -1,7 +1,7 @@
 .crew-page {
   text-align: center;
   background: black;
-  background-image: url("../assests/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
+  background-image: url("../assests/crew/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -55,7 +55,7 @@
 }
 
 .crew-cards p {
-  padding: 40px;
+  padding: 20px 40px;
   font-size: 0.9rem;
 }
 

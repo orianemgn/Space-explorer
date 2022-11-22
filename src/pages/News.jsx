@@ -4,6 +4,7 @@ import "./News.css";
 import { motion } from "framer-motion";
 import { useFetch } from "../hooks/useFetch/useFetch";
 import LoadingSpinner from "../components/loading-spinner/LoadingSpinner";
+import ScrollButton from "../components/scroll-button/ScrollButton";
 
 function News() {
   const newsFetch = "https://news-space.p.rapidapi.com/";
@@ -48,6 +49,7 @@ function News() {
         onClick={showMoreItems}>
         SEE MORE NEWS UPDATES
       </motion.button>
+      <ScrollButton />
     </div>
   );
 }

@@ -8,7 +8,9 @@ const CardApod = (props) => {
           src={props.apod.url}
           alt={props.apod.title}
         />
-        <h4>Copyright {props.apod.copyright}</h4>
+        <h4>
+          <i class="fa-regular fa-copyright"></i> {props.apod.copyright}
+        </h4>
         <p>{props.apod.explanation}</p>
       </div>
     </>

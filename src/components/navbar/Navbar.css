@@ -1,9 +1,16 @@
 /* Basic styling */
-:root {
+/*:root {
   --primary-color: #181818;
   --secondary-color: #4fbdba;
   --primary-text: white;
   --primary-text-hover: #35858b;
+  --button-color-hover: white;
+}*/
+:root {
+  --primary-color: #181818;
+  --secondary-color: #34363a;
+  --primary-text: white;
+  --primary-text-hover: #00c6cf;
   --button-color-hover: white;
 }
 
@@ -40,7 +47,6 @@ a {
 .item:not(.button) a:hover,
 item a:hover::after {
   color: var(--primary-text-hover);
-  font-weight: bold;
 }
 
 /*Mobile Menu*/

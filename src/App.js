@@ -6,16 +6,15 @@ import Home from "./pages/Home";
 import News from "./pages/News";
 import Videos from "./pages/Videos";
 import Crew from "./pages/Crew";
-import Header from "./components/navbar/Header";
+import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import { Spinner } from "react-bootstrap";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/news" element={<News />} />
