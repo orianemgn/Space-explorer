@@ -14,8 +14,8 @@ export const Button = styled.div`
   position: fixed;
   width: 100%;
   left: 93%;
-  bottom: 100px;
-  height: 30px;
+  bottom: 6rem;
+  height: 1.5rem;
   font-size: 3rem;
   z-index: 1;
   cursor: pointer;
