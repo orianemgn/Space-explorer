@@ -26,9 +26,13 @@ Space Explorer is a react application to.....
 [@StefanDsd](https://github.com/StefanDsd)
 
 - Home page
+  - Video Background [Ingrid North - Pexels](https://www.pexels.com/)
 - Video page
+  - Space in Motion using [Youtube Nasa LiveStream](https://www.youtube.com/) ,
+  - Welcome to the Moon   [Pre-recorded Footage](https://www.youtube.com/)
+  
 
-[@orianemgn](https://github.com/orianemgn/)
+ [@orianemgn](https://github.com/orianemgn/)
 
 - Responsive navbar
 - Planets pages with NASA API, Weather API and Solar-system API
@@ -37,8 +41,10 @@ Space Explorer is a react application to.....
   - Weather on Mars with [NASA API](`https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json)
 - Crew page
 
+
 ## Credits
 
 :raised_hands: Built and designed by [@Stef14-bit](https://github.com/Stef14-bit), [@StefanDsd](https://github.com/StefanDsd) & [@orianemgn](https://github.com/orianemgn/)
 
 Images from [Unsplash](https://unsplash.com/), Icons from [fontawesome](https://fontawesome.com/)
+
