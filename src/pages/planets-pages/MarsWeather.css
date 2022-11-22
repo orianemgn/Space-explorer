@@ -1,5 +1,5 @@
 .focus-on-mars {
-  background-image: url("../../assests/mars/mars-bg.jpg");
+  background-image: url("../../assests/mars/mars-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -114,6 +114,10 @@
 @media screen and (min-width: 960px) {
   .background-mars {
     height: 1200px;
+  }
+
+  .focus-on-mars {
+    background-image: url("../../assests/mars/mars-bg.jpg");
   }
 
   .focus-on-mars h1 {
