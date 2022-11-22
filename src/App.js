@@ -21,7 +21,7 @@ function App() {
           <Route path="/image-of-the-day" element={<Apod />} />
           <Route path="/planets-glossary" element={<PlanetsGlossary />} />
           <Route path="/weather-on-mars" element={<MarsWeather />} />
-          <Route path="/videos" element={<Videos />} />
+          <Route path="/videos" element={<Videos exitBeforeEnter />} />
           <Route path="/the-crew" element={<Crew />} />
         </Routes>
       </Router>
