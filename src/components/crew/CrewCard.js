@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 export const CrewCard = (props) => {
-  console.log(props);
   const { name, image, gitHubLink, linkedinLink, description } = props.crew;
 
   return (
@@ -23,7 +22,6 @@ export const CrewCard = (props) => {
             <i className="fa-brands fa-linkedin"></i>
           </a>
         </div>
-
         <p>{description}</p>
       </div>
     </motion.div>

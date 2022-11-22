@@ -6,12 +6,11 @@
 }
 
 .apod-card {
-  background: rgba(255, 255, 255, 0.728);
+  background: black;
   width: 100%;
   margin: auto;
   padding: 40px;
-  color: black;
-  border-radius: 15px;
+  color: white;
   position: relative;
   animation: apodcard 5s;
 }
@@ -51,9 +50,12 @@
     display: none;
   }
   .apod-card {
+    background: rgba(255, 255, 255, 0.728);
     width: 50%;
     height: auto;
     margin-right: 100px;
+    border-radius: 15px;
+    color: black;
   }
   .background-apod,
   .apod-container {
