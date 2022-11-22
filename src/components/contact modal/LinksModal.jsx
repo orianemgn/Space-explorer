@@ -42,11 +42,13 @@ function LinksModal({ onClick, linkArr }) {
         <p className="closeBtn" onClick={onClick}>
           close
         </p>
-        {linkArr.map((e) => {
+        {linkArr.map((e, i) => {
           return (
             <motion.a
+              key={i}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              // end of framer motion
               href={e.link}
               target="_blank"
               rel="noreferrer"
