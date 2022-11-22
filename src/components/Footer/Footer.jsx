@@ -30,7 +30,7 @@ const linkedinLinks = [
   },
   {
     userName: "StefanDs",
-    link: "https://www.linkedin.com/in/stefan-dascalescu/",
+    link: "https://www.linkedin.com/in/stefan-dascalescu-454aa9243/",
   },
 ];
 
@@ -48,7 +48,7 @@ function Footer() {
       <AnimatePresence
         //framer motion animation
         initial={false}
-        exitBeforeEnter={true}
+        mode="wait"
         onExitComplete={() => null}>
         {openModalGit && (
           <LinksModal
@@ -66,7 +66,7 @@ function Footer() {
       <AnimatePresence
         //framer motion animation
         initial={false}
-        exitBeforeEnter={true}
+        mode="wait"
         onExitComplete={() => null}>
         {openModalLinked && (
           <LinksModal
