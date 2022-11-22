@@ -38,11 +38,12 @@ html {
   margin-top: 10em;
   position: absolute;
 }
+
 .parallax-item h2 {
   margin-top: 10px;
   font-size: 2rem;
   text-transform: uppercase;
-  color: whitesmoke;
+  color: #cbcaca;
   letter-spacing: 1rem;
   font-family: "Anton", sans-serif;
   border-top: 3px solid white;
@@ -57,7 +58,7 @@ html {
   vertical-align: text-top;
   font-size: 1.6rem;
   text-align: center;
-  color: rgb(77, 73, 119);
+  color: rgb(204, 201, 242);
   font-weight: 450;
   line-height: 35px;
   border-radius: 1rem;
@@ -85,14 +86,8 @@ html {
   
 }
 .parallax-item:nth-child(2) {
-  background-image: radial-gradient(
-    circle,
-    #b4cceed3,
-    #acd9ebcc,
-    #b7e3e1c7,
-    #cfe9d9c8,
-    #e8eedac8
-  );
+  background: rgb(24,24,24);
+background: linear-gradient(16deg, rgba(24,24,24,1) 12%, rgba(136,151,217,0.8407738095238095) 97%);;
   
   min-height: 700px;
 }
