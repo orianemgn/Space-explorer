@@ -29,10 +29,10 @@ html {
 
    }
   .parallax-item h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: whitesmoke;
-    letter-spacing: 1rem;
+    letter-spacing: 1.3rem;
     font-family: "Anton", sans-serif;
     padding: 4rem;
     border-radius: 1rem;
@@ -88,7 +88,7 @@ html {
   }
   
   .parallax-item:nth-child(4) {
-    background: #181818;
+    background: #312d2d;
 
     min-height: 600px;
   }
@@ -129,7 +129,7 @@ html {
       height: 80%;
       left: 10%;
       margin-top: 100px;
-      position: absolute;
+      position: fixed;
      }
      
   }
