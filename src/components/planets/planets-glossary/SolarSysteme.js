@@ -24,14 +24,20 @@ const SolarSystem = () => {
     }
   }, [apiResp, isLoading]);
 
-  console.log("solarSystemFiltered:", solarSystemFiltered);
-
   useEffect(() => {
     if (solarSystemFiltered.length) {
-      const image = planetsItemsList.find(
+      const detailPlanet = planetsItemsList.find(
         (planet) => planet.title === "Neptune"
-      ).img;
-      const planet = { ...solarSystemFiltered[1], image };
+      );
+      const image = detailPlanet.img;
+      const distanceFromEarth = detailPlanet.distanceFromEarth;
+      const description = detailPlanet.description;
+      const planet = {
+        ...solarSystemFiltered[1],
+        image,
+        distanceFromEarth,
+        description,
+      };
       setDetailPlanet(planet);
     }
   }, [solarSystemFiltered]);
@@ -52,7 +58,9 @@ const SolarSystem = () => {
             <motion.div
               whileInView={{ y: [100, 20], opacity: [0, 1] }}
               transition={{ duration: 0.8, ease: "easeIn" }}
-              className="planets-infos">
+              className="planet-infos"
+            >
+
               <div className="planets-btn-container">
                 {solarSystemFiltered.map((planet, index) => {
                   return (

@@ -1,11 +1,15 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 export const CrewCard = (props) => {
   console.log(props);
   const { name, image, gitHubLink, linkedinLink, description } = props.crew;
 
   return (
-    <div className="crew-cards">
+    <motion.div
+      whileInView={{ y: [100, 20], opacity: [0, 1] }}
+      transition={{ duration: 0.8, ease: "easeIn" }}
+      className="crew-cards"
+    >
       <div>
         <img src={image} alt={name}></img>
       </div>
@@ -22,6 +26,6 @@ export const CrewCard = (props) => {
 
         <p>{description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -15,28 +15,25 @@
 
 .crew-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 .crew-cards {
-  width: 90%;
+  width: 70%;
   background: rgba(255, 255, 255, 0.728);
-  margin: 20px;
+  margin: 40px;
   padding: 20px 20px;
   border-radius: 15px;
-  /*position: relative;
-  animation: mymove 5s;*/
 }
 
-/*@keyframes mymove {
-  from {
-    right: -300px;
-  }
-  to {
-    left: 0px;
-  }
-}*/
+.crew-cards:hover {
+  box-shadow: 10px 10px 23px 1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 10px 10px 23px 1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 10px 10px 23px 1px rgba(0, 0, 0, 0.33);
+}
 
 .crew-cards img {
   border-radius: 50%;
@@ -51,7 +48,19 @@
   color: black;
 }
 
+.crew-cards i:hover {
+  font-size: 2.2rem;
+  padding: 20px 10px;
+  color: black;
+}
+
 .crew-cards p {
   padding: 40px;
   font-size: 0.9rem;
+}
+
+@media screen and (min-width: 960px) {
+  .crew-container {
+    flex-direction: row;
+  }
 }

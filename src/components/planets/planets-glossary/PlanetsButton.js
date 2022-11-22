@@ -14,6 +14,7 @@ const PlanetsButton = (props) => {
 
   const image = detailPlanet.img;
   const distanceFromEarth = detailPlanet.distanceFromEarth;
+  const description = detailPlanet.description;
 
   return (
     <button
@@ -30,6 +31,7 @@ const PlanetsButton = (props) => {
           gravity,
           image,
           distanceFromEarth,
+          description,
         })
       }
     >
