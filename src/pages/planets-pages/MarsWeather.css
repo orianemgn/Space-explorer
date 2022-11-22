@@ -75,7 +75,7 @@
   align-content: flex-end;
   text-align: center;
   margin-top: 15px;
-  padding-bottom: 60px;
+  padding: 0 40px 60px;
 }
 
 .weather-cards {

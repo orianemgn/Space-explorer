@@ -42,6 +42,10 @@
   text-decoration: underline;
 }
 
+.planet-infos {
+  padding-bottom: 60px;
+}
+
 .planet-card {
   width: 50%;
   margin: auto;

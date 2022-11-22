@@ -25,7 +25,7 @@ Space Explorer is a React application made as a school project at the Wild Code 
 [@Stef14-bit](https://github.com/Stef14-bit)
 
 - News page
-- Creation of a API to colect news
+- Creation of a API to collect news
 - Footer
 - Contact modal
 
