@@ -1,0 +1,9 @@
+.footerButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

@@ -1,0 +1,115 @@
+.galaxy-background {
+  background-image: url("../../../assests/planets/guillermo-ferla-QfLm-2AiJ_M-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.planets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.planets-btn-container {
+  width: 60%;
+  margin: auto;
+}
+
+.planets-buttons {
+  font-family: "Anton", sans-serif;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px;
+  border: none;
+}
+
+.planets-buttons:hover {
+  text-decoration: underline;
+}
+
+.planet-active {
+  text-decoration: underline;
+}
+
+.planet-card {
+  width: 50%;
+  margin: auto;
+}
+
+.planet-card h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+}
+
+.planet-card-bottom {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 0;
+}
+
+.planet-card-bottom div {
+  margin: 0 10px;
+}
+
+.planet-img {
+  width: 220px;
+  padding: 10px 10px 70px 10px;
+}
+
+.planet-img {
+  margin-bottom: 0;
+}
+
+.rotate {
+  animation: rotation 10s;
+}
+
+.linear {
+  animation-timing-function: linear;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .galaxy-background {
+    justify-content: space-evenly;
+  }
+  .planets-container {
+    flex-direction: row;
+  }
+  .planet-img {
+    width: 400px;
+    padding: 10px 10px 70px 10px;
+  }
+  .planet-infos {
+    width: 50%;
+  }
+
+  .planet-card {
+    width: 50%;
+    margin: auto;
+  }
+}
