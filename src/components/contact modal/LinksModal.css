@@ -13,7 +13,7 @@
 
 .modalContainer {
   max-width: 30rem;
-  max-height: 25rem;
+  height: 22rem;
   position: fixed;
   left: 0;
   right: 0;
@@ -25,11 +25,20 @@
   border-radius: 1rem;
 }
 .closeBtn {
+  font-weight: 900;
   align-self: flex-end;
-  padding: 1em;
+  padding: 0.5em;
+  margin: 0.5rem;
   cursor: pointer;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.closeBtn:hover {
+  background-color: #181818;
+  color: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .modalContainer a {
   background-color: #181818;
   color: #f5f5f5;

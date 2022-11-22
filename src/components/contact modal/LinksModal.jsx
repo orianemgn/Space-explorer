@@ -40,7 +40,7 @@ function LinksModal({ onClick, linkArr }) {
         animate="visible"
         exit="exit">
         <p className="closeBtn" onClick={onClick}>
-          close
+          X
         </p>
         {linkArr.map((e, i) => {
           return (
