@@ -4,7 +4,7 @@
 
 ## The project
 
-Space Explorer is a react application to.....
+Space Explorer is a react application created in the context of the second project of Wild Code School.
 
 ## How can I see it?
 
@@ -19,9 +19,10 @@ Space Explorer is a react application to.....
 
 [@Stef14-bit](https://github.com/Stef14-bit)
 
-- News with creation of a API
+- News page
+- Creation of a API to colect news
 - Footer
-- Modal and links on the footer
+- Contact modal
 
 [@StefanDsd](https://github.com/StefanDsd)
 
