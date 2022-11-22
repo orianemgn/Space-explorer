@@ -17,13 +17,7 @@ const MarsWeather = () => {
   useEffect(() => {
     if (!isLoading && marsWeatherResp) {
       const data = marsWeatherResp.data.soles;
-      setLastSevenDays(
-        data.filter((element, index) => {
-          if (index < 7) {
-            return element;
-          }
-        })
-      );
+      setLastSevenDays(data.filter((_element, index) => index < 7));
     }
   }, [marsWeatherResp, isLoading]);
 
