@@ -8,7 +8,7 @@ Space Explorer is a React application made as a school project at the Wild Code 
 
 ## How can I see it?
 
-:sun_with_face: The project is hosted on xxx: link of the project
+:sun_with_face: The project is hosted on [Netlify](https://www.netlify.com/): [link of the project](https://wild-space-explorer.netlify.app/)
 
 ## What it looks like
 
