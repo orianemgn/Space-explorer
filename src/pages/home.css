@@ -23,3 +23,15 @@ video {
   letter-spacing: 1rem;
   
 }
+
+@media screen and (max-width: 960px) {
+  .content , h1 {
+    bottom: 5%;
+    left: 15%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1em ;
+
+  }
+}
