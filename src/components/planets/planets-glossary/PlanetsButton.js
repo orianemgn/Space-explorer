@@ -1,4 +1,4 @@
-import { planetsItemsList } from "./planetsItemsList";
+import { planetsItemsList } from "../../../planetsItemsList";
 
 const PlanetsButton = (props) => {
   const { setDetailPlanet, detailPlanetState } = props;
