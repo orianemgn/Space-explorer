@@ -1,11 +1,11 @@
-import Neptune from "../../../assests/planets/neptune.png";
-import Uranus from "../../../assests/planets/uranus.png";
-import Mars from "../../../assests/planets/mars.png";
-import Saturn from "../../../assests/planets/saturn.png";
-import Jupiter from "../../../assests/planets/jupiter.png";
-import Mercury from "../../../assests/planets/mercury.png";
-import Earth from "../../../assests/planets/earth.png";
-import Venus from "../../../assests/planets/venus.png";
+import Neptune from "./assests/planets/neptune.png";
+import Uranus from "./assests/planets/uranus.png";
+import Mars from "./assests/planets/mars.png";
+import Saturn from "./assests/planets/saturn.png";
+import Jupiter from "./assests/planets/jupiter.png";
+import Mercury from "./assests/planets/mercury.png";
+import Earth from "./assests/planets/earth.png";
+import Venus from "./assests/planets/venus.png";
 
 export const planetsItemsList = [
   {

@@ -12,15 +12,6 @@
   padding: 40px;
   color: white;
   position: relative;
-  animation: apodcard 5s;
-}
-@keyframes apodcard {
-  from {
-    left: 300px;
-  }
-  to {
-    left: 0px;
-  }
 }
 
 .apod-card h1 {
@@ -56,7 +47,18 @@
     margin-right: 100px;
     border-radius: 15px;
     color: black;
+    animation: apodcard 2s;
   }
+
+  @keyframes apodcard {
+    from {
+      left: 300px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+
   .background-apod,
   .apod-container {
     height: 100vh;

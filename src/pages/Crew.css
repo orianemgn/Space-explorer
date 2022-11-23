@@ -1,11 +1,20 @@
 .crew-page {
+  /*
   text-align: center;
-  background: black;
   background-image: url("../assests/crew/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  min-height: 100vh;*/
+  text-align: center;
+  width: 100vw;
   min-height: 100vh;
+  background: black;
+  background-image: radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, white 2px, transparent 1px),
+    radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 150px 150px;
+  background-position: 10px 10px, 50px 125px, 125px 75px;
 }
 
 .crew-page h1 {

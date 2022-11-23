@@ -3,7 +3,6 @@ import "./VideoPage.css";
 import { useEffect, useRef } from "react";
 import ReactPlayer from "react-player";
 import { motion } from "framer-motion";
-import ScrollButton from "../scroll-button/ScrollButton";
 
 export default function VideoPage() {
   const paralax2 = useRef();
