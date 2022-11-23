@@ -6,7 +6,7 @@ export const CrewCard = (props) => {
   return (
     <motion.div
       whileInView={{ y: [100, 20], opacity: [0, 1] }}
-      transition={{ duration: 0.8, ease: "easeIn" }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
       className="crew-cards"
     >
       <div>
